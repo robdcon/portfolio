@@ -1,0 +1,27 @@
+<!--JQUERY-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--BOOTSTRAP-->
+
+<!-- css -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>
+
+<!-- js -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!--NORMALISE-->
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css.map"></script>
+
+<!--MODERNIZR-->
+
+https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js
+
+<!--RESPOND-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>

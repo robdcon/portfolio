@@ -1,0 +1,23 @@
+BOOTSTRAP 4.0 BETA
+
+JS:
+
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css
+
+CSS:
+
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js
+
+JS BUNDLE:
+
+https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.bundle.min.js
+
+BOOTSTRAP 3.0
+
+CSS:
+
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css
+
+JS:
+
+https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js
