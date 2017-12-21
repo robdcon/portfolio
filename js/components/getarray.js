@@ -9,7 +9,7 @@ module.exports = function(category)
 
 	$.ajax({
 
-		url:'json/images.json',
+		url:'C:/Users/BUCK2FAST/Documents/web-resources/myprojects/my_portfolio/json/images.json',
 		type:'GET',
 		dataType:'json',
 		success:function(response)

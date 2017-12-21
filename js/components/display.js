@@ -2,5 +2,5 @@
 
 module.exports = function(container, element)
 {
-	container.html(element)
+	container.innerHTML = element
 }

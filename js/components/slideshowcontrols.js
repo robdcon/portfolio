@@ -1,6 +1,6 @@
 var counter = require('./counter')
 var getarray = require('./getarray')
-var arrayLength = getarray.length
+var arrayLength = 5
 
 function slideshowControls(arrayLength) 
 {	
