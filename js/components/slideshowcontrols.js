@@ -1,16 +1,11 @@
-var counter = require('./counter')
-var getarray = require('./getarray')
-var arrayLength = 5
-
-function slideshowControls(arrayLength) 
+module.exports = function(arrayLength) 
 {	
-
-	var index : counter.current
+	var index = counter.current
 					 
 	return function()
 	{
 
-		next:  function() // Bind the index methods to the navigation buttons
+		this.next =  function() // Bind the index methods to the navigation buttons
 		{
 			
 			counter.increment() // Increments the index variables counter and returns its value
@@ -23,7 +18,7 @@ function slideshowControls(arrayLength)
 			}	
 		},
 
-		prev: function()
+		this.prev = function()
 		{
 			
 			counter.decrement()

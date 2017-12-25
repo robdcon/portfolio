@@ -1,4 +1,5 @@
 // Take a category as a parameter (the id of the clicked link, which corresponds to an object in the json file)
+var display = require('./display')
 
 module.exports = function(category) 
 {
@@ -9,7 +10,7 @@ module.exports = function(category)
 
 	$.ajax({
 
-		url:'C:/Users/BUCK2FAST/Documents/web-resources/myprojects/my_portfolio/json/images.json',
+		url:'http://localhost/projects/my_portfolio/json/images.json',
 		type:'GET',
 		dataType:'json',
 		success:function(response)
@@ -21,8 +22,8 @@ module.exports = function(category)
 		    		if(this.category == category) // If the category key of the object matches the category parameter
 		    		{
 		    		
-		    		array = this.array
-		    		console.log(array)
+		    			array = this.array
+		    			display(window.document.getElementById('slide-container'), array[0].title)
 			    	
 				    }
 		

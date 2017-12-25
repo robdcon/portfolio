@@ -1,13 +1,14 @@
-
+var $ = require('jquery-browserify')
 
 var getarray = require('./components/getarray')
-var display = require('./components/display')
 
+var slideControl = require('./components/slideshowcontrols')
 
 var slideContainer = window.document.getElementById('slide-container')
-var slideImage = "<img src='' class='' alt='slide' />"
+// var slideImage = "<img src='' class='' alt='slide' />"
 
 getarray('graphic_design')
 
-display(slideContainer, "hello world")
+
+
 
