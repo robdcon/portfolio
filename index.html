@@ -4,7 +4,13 @@
 
 		<title>Web Development &amp; Graphic Design Portfolio of Rob Connolly</title>
 		
-		<meta name="description" value="Web Development, Graphic Design, Original Artwork, Logo Design, Websites, CMS Sites, Web Components, E-Commerce Solutions, Portyfolio of work by Rob Connolly, this site exhibits current skill levels in modern technologies &amp; demonstrates my own personal style, lets create something great!">
+		<meta name="description" value="Web Development, Graphic Design, Original Artwork, Logo Design, Websites, CMS Sites, Web Components, E-Commerce Solutions, Portfolio of work by Rob Connolly, this site exhibits current skill levels in modern technologies &amp; demonstrates my own personal style, lets create something great!">
+
+		<link rel="stylesheet" type="text/css" href="css/main.css?">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
+
+		<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600,800' rel='stylesheet' type='text/css'/>
 
 		<!--JQUERY-->
 
@@ -36,27 +42,46 @@
 
 	</head>
 
-	<!-- BROWSERIFY -->	
-
 	<body>
 
-		<main>
-		
-			<section id="landing-page" class="panel">
+		<div class="sidebar">
 
-				<h1>Hello World!</h1>
-	
-				<div id="slide-container"></div>
+			<nav class="sidebar-nav">
+
+				<ul>					
+					<li><a href="#">HOME</a></li>
+					<li><a href="#" class="slideshow-init" id="graphic_design">GRAPHIC DESIGN</a></li>
+					<li><a href="#" id="web-dev">WEB DEVELOPMENT</a></li>
+					<li><a href="#" id="artwork" class="slideshow-init" >ARTWORK</a></li>
+					<li><a href="#">ABOUT ME</a></li>
+				</ul>
+
+			</nav>
+
+		</div><!--sidebar-->
+
+		<main>
+
+			<section>
+				
+
+
+					
+
+			</section>
+		
+			<section id="landing-page" class="panel bg1">
+
+				<!--Area to load html for displaying web development work-->
+				<div id="loaded-content">
+
+				</div>				
 	
 			</section>
 	
-			<section class="panel"></section>
-			<section class="panel"></section>
-			<section class="panel"></section>
-
 		</main>
 
-		<script src="js/browser.js"></script>
+		<script src="js/bundle.js?version=6"></script>
 
 	</body>
 

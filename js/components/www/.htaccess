@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /basic_test/
+
+RewriteRule ^index.php$ test.php

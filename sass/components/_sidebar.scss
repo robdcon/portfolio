@@ -1,0 +1,34 @@
+.sidebar
+{
+	
+	display:inline-block;
+	float:left;
+	height: 100%;
+	width:25%;
+	background-color: #000;
+
+	nav
+	{
+		ul
+		{
+			padding:0;
+			width:100%;
+		}
+
+		li
+		{
+			display:block;
+		}
+
+		a
+		{
+			font-family:$main_font;
+			font-size: $h3;
+			color: $link-initial;
+
+			&:hover{ color: $link-hover };
+			&:active{ color: $link-hover };
+			
+		}
+	}
+}

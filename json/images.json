@@ -10,56 +10,49 @@
 					"url":"images/banner_1.jpg",
 					"url_lg":"images/banner_1_lg.jpg",
 					"alt":"banner graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Banner Ad for Rezoomo.com",
 					"url":"images/banner_2.jpg",
 					"url_lg":"images/banner_2_lg.jpg",
 					"alt":"banner graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Banner Ad for Rezoomo.com",
 					"url":"images/banner_3.jpg",
 					"url_lg":"images/banner_3_lg.jpg",
 					"alt":"banner graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Poster Mock Up 1 for V&A Exhibition",
 					"url":"images/jimi_collage.jpg",
 					"url_lg":"images/jimi_collage_lg.jpg",
 					"alt":"poster mock up graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Poster Mock Up 2 for V&A Exhibition",
 					"url":"images/poster_hendrix.jpg",
 					"url_lg":"images/poster_hendrix_lg.jpg",
 					"alt":"poster mock up graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
 					"url":"images/poster_livemusic2.jpg",
 					"url_lg":"images/poster_livemusic2_lg.jpg",
 					"alt":"poster mock up graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
 					"url":"images/poster_livemusic3.jpg",
 					"url_lg":"images/poster_livemusic3_lg.jpg",
 					"alt":"poster mock up graphic",
-					"category":"graphics"
-				},
-				{
-					"title":"Live Music Poster for Artillery Arms",
-					"url":"images/poster_livemusic3.jpg",
-					"url_lg":"images/poster_livemusic3_lg.jpg",
-					"alt":"poster mock up graphic",
-					"category":"graphics"
+					"tag":"graphics"
 				}
 				
 			]
@@ -74,56 +67,63 @@
 					"url":"images/lightbox_archer.jpg",
 					"url_lg":"images/lightbox_archer_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Bio-Mechanical Brain",
-					"url":"images/lightbox_biobrain.jpg",
+					"url":"images/lightbox_bio_brain.jpg",
 					"url_lg":"images/lightbox_biobrain_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Bio-Mechanical Worms",
 					"url":"images/lightbox_bioworms.jpg",
 					"url_lg":"images/lightbox_bioworms_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Creature Feature - Punkfish - Coloured Pencil Art",
 					"url":"images/lightbox_punkfish.jpg",
 					"url_lg":"images/lightbox_punkfish_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Bob Marley - Ballpoint Pen Portrait",
 					"url":"images/lightbox_bob.jpg",
 					"url_lg":"images/lightbox_bob_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"The Joker - Ballpoint Pen Portrait",
 					"url":"images/lightbox_joker.jpg",
 					"url_lg":"images/lightbox_joker_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Al Pacino - Ballpoint Pen Portrait",
 					"url":"images/lightbox_pacino.jpg",
 					"url_lg":"images/lightbox_pacino_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
 				},
 				{
 					"title":"Ceature Feature Hand Monster - Ballpoint Pen Drawing",
 					"url":"images/lightbox_handcreature.jpg",
 					"url_lg":"images/lightbox_handcreature_lg.jpg",
 					"alt":"original artwork",
-					"category":"artwork"
+					"tag":"artwork"
+				},
+				{
+					"title":"Eye of the Beholder - Airbrush & Acrylic",
+					"url":"images/eye-of-the-beholder.jpg",
+					"url_lg":"images/eye-of-the-beholder_lg.jpg",
+					"alt":"original artwork",
+					"tag":"artwork"
 				}
 
 			]

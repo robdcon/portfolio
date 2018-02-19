@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+
+	<title>Weather Update</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!--BOOTSTRAP CDN-->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	
+	<!-- MY SCRIPT -->
+	<script type="text/javascript" src="apiweather.js"></script>
+	<!--MY STYLES-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="css/weather-icons-wind.min.css">
+
+</head>
+
+<body>
+
+	<div id="tablecontainer" class="">
+
+		<div id="logocontainer">
+
+			<img class="logo" src="img/cloud_logo.png" alt="Weather watch logo">
+
+			<div id="logo">			
+				<h1>Weather Watch </h1>
+				<span class="caption">UK City Weather Search</span>
+			</div>
+
+		</div>
+
+		<span id="day"></span><span id="date"></span>
+		
+		<div id="area-select" class="">
+
+			<div id="countries-select" class="">
+
+				<form id="country-form">
+
+					<select name="countries" id="countries"> 
+
+						<option selected>Select a Country</option>
+						<option value="england">England</option>
+						<option value="nireland">Northern Ireland</option>
+						<option value="scotland">Scotland</option>
+						<option value="wales">Wales</option>
+
+					</select>
+
+				</form>
+
+			</div>
+
+			<div class="" id="cities-select">
+
+				<form id="city-form">
+
+				<select name="cities" id="cities">
+				</select>
+
+				</form>
+
+			</div>
+
+
+		</div>
+					
+		<div id="weather-results">			
+
+			<table>
+
+					<!-- <tr>
+						<td id="weather-section-cityname"></td>
+						
+						<td id="weather-section-currentconditions-icon"></td>
+
+					</tr>
+
+					<tr>
+						<td>Current conditions</td>
+						<td id="weather-section-currentconditions"></td>
+					</tr>
+
+					<tr>
+						<td>Temperature</td>
+						<td id="weather-section-temperature"></td>
+					</tr>
+					<tr>
+						<td>Wind Speed</td>
+						<td id="weather-section-windspeed"></td>
+					</tr>
+					<tr>
+						<td>Wind Direction</td>
+						<td id="weather-section-winddirection"></td>
+					</tr>
+-->
+			</table>
+
+		</div><!--weatherresults-->
+
+	</div><!--tablecontainer-->
+
+</body>
+</html>
