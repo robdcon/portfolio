@@ -151,10 +151,11 @@ table {
   width: 25%;
   background-color: #000; }
   .sidebar nav ul {
-    padding: 0;
+    padding: 1em 0;
     width: 100%; }
   .sidebar nav li {
-    display: block; }
+    display: block;
+    padding: .5em; }
   .sidebar nav a {
     font-family: "Exo 2", sans-serif;
     font-size: 1.75em;
@@ -212,5 +213,13 @@ table {
 
 #prev:hover {
   background-image: url(../images/icons/left-icon-hover.png); }
+
+iframe {
+  width: 100%;
+  height: 100%; }
+
+#iframe-container {
+  resize: both;
+  overflow: auto; }
 
 /*# sourceMappingURL=main.css.map */

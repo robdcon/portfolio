@@ -12,7 +12,8 @@ var imgUrl = 'json/images.json'
 function displaySlide(container,content)
 {
 
-	$('#img-container').html(content)
+	$('#img-container').hide().html(content).fadeIn()
+	
 }
 
 

@@ -1,13 +1,13 @@
-var $ = require('jquery-browserify')
-var slideshow = require('./components/slideshow-closure')()
-
+const $ = require('jquery-browserify')
+const slideshow = require('./components/slideshow-closure')()
+const fetch = require('fetch').fetchUrl
 
 
 // Bind event handlers to set up slideshow
 
 $('.slideshow-init').click(function()
 {
-	var key = (this.id)
+	const key = (this.id)
 
 	$('#loaded-content').load('slideshow.html', function()
 	{
@@ -54,12 +54,36 @@ function slideshowDisplay(key)
 
 // Show web content
 
-$('#web-dev').click(function()
+$('#web-dev').click(()=>
 {
-	$('#loaded-content').load('weather-frame.html')
+	fetch(' http://localhost/projects/my_portfolio/web-dev.html', 
+		(err,meta,body)=>
+		{
+			$('#loaded-content').html(body.toString())
+			iframeSelect()
+		})
+	
 })
 
+function showContent()
+{
+	$('#img-container').attr('src', 'http://mariamagichand.ie')
+}
 
+// Set the URL src of the iframe to the data-url of the link
+
+
+
+function iframeSelect()
+{
+	$('.iframe-src').click(function()
+	{
+		
+		var url = $(this).data('url')
+
+		$('#iframe-container > iframe').attr('src', url)
+	})
+}
 
 
 

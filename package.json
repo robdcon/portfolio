@@ -6,14 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "watchify js/main.js -o js/bundle.js -d",
-    "scss": "sass --watch sass/main.scss:css/main.css" 
+    "scss": "sass --watch sass/main.scss:css/main.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "browser-request": "^0.3.3",
+    "fetch": "^1.1.0",
     "jquery-browserify": "^1.8.1",
+    "react-router": "^3.2.0",
     "superagent": "^3.8.2",
     "underscore": "^1.8.3",
     "watch": "^1.0.2",
