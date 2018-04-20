@@ -60,8 +60,18 @@ $('#web-dev-link').click(()=>
 		(err,meta,body)=>
 		{
 			$('#loaded-content').html(body.toString())
-			iframeSelect()
+			$('.web-dev-link-item > a').click(function()
+			{
+				var url = this.dataset.url
+				var iframe = $('.iframe-container > iframe')
+				console.log(iframe, url)
+				$('.iframe-container > iframe').attr('src', url)
+
+		
+			})
 		})
+
+
 	
 })
 
@@ -93,6 +103,7 @@ function iframeSelect()
 		$('#iframe-container > iframe').attr('src', url)
 	})
 }
+
 
 
 
