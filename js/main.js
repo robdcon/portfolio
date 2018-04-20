@@ -1,8 +1,9 @@
 const $ = require('jquery-browserify')
 const slideshow = require('./components/slideshow-closure')()
 const fetch = require('fetch').fetchUrl
+const MotionUi = require('motion-ui')
 
-
+setTimeout(()=>{$('#test').addClass('slide-in-left')}, 2000)
 // Bind event handlers to set up slideshow
 
 $('.slideshow-init').click(function()
@@ -14,15 +15,14 @@ $('.slideshow-init').click(function()
 		slideshowDisplay(key)
 		bindControls()
 
-	})
-	
+	})	
 	
 })
 
 function bindControls()
 {
 	// Bind event handlers to provide the slideshow functionality
-	console.log('success')
+	
 	$('#next').click(function()
 	{
 		slideshow.next()
@@ -54,9 +54,20 @@ function slideshowDisplay(key)
 
 // Show web content
 
-$('#web-dev').click(()=>
+$('#web-dev-link').click(()=>
 {
 	fetch(' http://localhost/projects/my_portfolio/web-dev.html', 
+		(err,meta,body)=>
+		{
+			$('#loaded-content').html(body.toString())
+			iframeSelect()
+		})
+	
+})
+
+$('#about').click(()=>
+{
+	fetch(' http://localhost/projects/my_portfolio/about.html', 
 		(err,meta,body)=>
 		{
 			$('#loaded-content').html(body.toString())
@@ -72,8 +83,6 @@ function showContent()
 
 // Set the URL src of the iframe to the data-url of the link
 
-
-
 function iframeSelect()
 {
 	$('.iframe-src').click(function()
@@ -84,6 +93,10 @@ function iframeSelect()
 		$('#iframe-container > iframe').attr('src', url)
 	})
 }
+
+
+
+
 
 
 

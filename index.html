@@ -6,43 +6,75 @@
 		
 		<meta name="description" value="Web Development, Graphic Design, Original Artwork, Logo Design, Websites, CMS Sites, Web Components, E-Commerce Solutions, Portfolio of work by Rob Connolly, this site exhibits current skill levels in modern technologies &amp; demonstrates my own personal style, lets create something great!">
 
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!--BOOTSTRAP CSS-->
+
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+		<!--FONT AWESOME-->
+
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/custom.css">
-		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
-
-		<link href='http://fonts.googleapis.com/css?family=Exo+2:400,600,800' rel='stylesheet' type='text/css'/>
-
-		<!--JQUERY-->
-
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-
-		<!--BOOTSTRAP-->
-
-		<!-- css -->
-
-		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></script> -->
-
-		<!-- js -->
-
-		<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="css/webdev.css">
+		<link rel="stylesheet" type="text/css" href="css/animation.css">
 
 		<!--NORMALISE-->
 
-		<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></script>-->
-
-		 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css.map"></script> -->
+		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"></script> -->
 
 		<!--MODERNIZR-->
 
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
 		<!--RESPOND-->
 
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script> -->		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>		
 
 	</head>
 
 	<body>
+
+		<!-- <div id='test'></div> -->
+	
+		<!--COLLAPSABLE NAV ICON-->
+		<!-- <nav class="navbar navbar-dark">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+       			 <span class="navbar-toggler-icon"></span>
+     		</button>
+
+			<div class="collapse navbar-collapse" id="navbarsExample01">
+
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item active">
+	            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link" href="#">Link</a>
+	          </li>
+	          <li class="nav-item">
+	            <a class="nav-link disabled" href="#">Disabled</a>
+	          </li>
+	          <li class="nav-item dropdown">
+	            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+	            <div class="dropdown-menu" aria-labelledby="dropdown01">
+	              <a class="dropdown-item" href="#">Action</a>
+	              <a class="dropdown-item" href="#">Another action</a>
+	              <a class="dropdown-item" href="#">Something else here</a>
+	            </div>
+	          </li>
+	        </ul>
+	        <form class="form-inline my-2 my-md-0">
+	          <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+	        </form>
+	      </div>
+
+
+		</nav> -->
 
 		<div class="sidebar">
 
@@ -55,9 +87,9 @@
 				<ul>					
 					<li><a href="#">HOME</a></li>
 					<li><a href="#" class="slideshow-init" id="graphic_design">GRAPHIC DESIGN</a></li>
-					<li><a href="#" id="web-dev">WEB DEVELOPMENT</a></li>
+					<li><a href="#" id="web-dev-link">WEB DEVELOPMENT</a></li>
 					<li><a href="#" id="artwork" class="slideshow-init" >ARTWORK</a></li>
-					<li><a href="#">ABOUT ME</a></li>
+					<li><a href="#" id="about">ABOUT ME</a></li>
 				</ul>
 
 			</nav>
@@ -84,8 +116,18 @@
 			</section>
 	
 		</main>
+	
+		<!--JQUERY-->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+		<!--POPPER-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		
+		<!--BOOTSTRAP-->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 		<script src="js/bundle.js?version=6"></script>
+
 
 	</body>
 

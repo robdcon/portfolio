@@ -1,10 +1,10 @@
 // Closure function returns an object with next and prev methods
 // These methods can access the private data and functions
 // next & prev can increment & decrement the index, respectively
-// They then call the function to set slide & display the  in the DOM
+// They then call the function to set the slide & display it in the DOM
 
 
-var imgContainer = $('#img-container')
+var imgContainer = $('#img-container') 
 var imgUrl = 'json/images.json'
 
 // Display content in container element as set above
