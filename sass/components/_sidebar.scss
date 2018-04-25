@@ -3,10 +3,9 @@
 .sidebar
 {
 	
-	display:inline-block;
-	float:left;
+	position:absolute;
 	height: 100%;
-	width: (100vw / 3);
+	width: calc(100vw / 2);
 	background-color: #000;
 
 	nav
@@ -21,17 +20,12 @@
 		{
 			display:block;
 			padding:.5em;
+
+			a
+			{
+				text-decoration:none;
+			}
 		}
 
-		a
-		{
-			font-family:$main_font;
-			font-size: $h3;
-			color: $link-initial;
-
-			&:hover{ color: $link-hover };
-			&:active{ color: $link-hover };
-			
-		}
 	}
 }

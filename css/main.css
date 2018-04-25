@@ -3,6 +3,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -150,12 +151,21 @@ nav.navbar {
   nav.navbar .navbar-collapse {
     background-color: black; }
 
+a {
+  font-family: "Exo 2", sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all, 0.25s; }
+  a:hover {
+    color: #ff0000; }
+  a:active {
+    color: #ff0000; }
+
 /* SIDEBAR NAV */
 .sidebar {
-  display: inline-block;
-  float: left;
+  position: absolute;
   height: 100%;
-  width: 25%;
+  width: calc(100vw / 2);
   background-color: #000; }
   .sidebar nav ul {
     padding: 1em 0;
@@ -163,14 +173,8 @@ nav.navbar {
   .sidebar nav li {
     display: block;
     padding: .5em; }
-  .sidebar nav a {
-    font-family: "Exo 2", sans-serif;
-    font-size: 1.75em;
-    color: #ffffff; }
-    .sidebar nav a:hover {
-      color: #ff0000; }
-    .sidebar nav a:active {
-      color: #ff0000; }
+    .sidebar nav li a {
+      text-decoration: none; }
 
 /* SLIDESHOW */
 #slideshow, #slide-container {
@@ -276,10 +280,14 @@ body {
   font-family: 'Exo 2', sans-serif;
   color: white;
   text-align: center; }
-
-a {
-  color: #fff;
-  text-decoration: none; }
+  body {
+    font-size: 16px; }
+    @media screen and (min-width: 320px) {
+      body {
+        font-size: calc(16px + 8 * ((100vw - 320px) / 880)); } }
+    @media screen and (min-width: 1200px) {
+      body {
+        font-size: 24px; } }
 
 main {
   width: 75%;
@@ -288,7 +296,7 @@ main {
 
 /* PANELS */
 .panel {
-  width: 100%;
+  width: 100vw;
   height: 100vh; }
 
 /*#test
