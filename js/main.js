@@ -3,7 +3,26 @@ const slideshow = require('./components/slideshow-closure')()
 const fetch = require('fetch').fetchUrl
 const MotionUi = require('motion-ui')
 
-setTimeout(()=>{$('#test').addClass('slide-in-left')}, 2000)
+
+
+
+// Add slide effect to sidebar
+$('.sidebar-icon').click(function()
+{
+	$('.sidebar').toggleClass('open')
+	// if($('.sidebar').data('active') == 'false')
+	// {
+		
+	// 	$('.sidebar').addClass('slide-in')
+	// }
+	// else
+	// {
+
+	// 	$('.sidebar').removeClass('slide-in').addClass('slide-Out')
+		
+	// }
+	
+})
 // Bind event handlers to set up slideshow
 
 $('.slideshow-init').click(function()

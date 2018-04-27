@@ -1,12 +1,24 @@
 /* SIDEBAR NAV */
-
-.sidebar
+ 
+$sidebarWidth : (100vw / 2.6);
+.open
+{
+	transform: translateX($sidebarWidth);
+}
+.closed
 {
 	
+}
+.sidebar
+{
 	position:absolute;
 	height: 100%;
-	width: calc(100vw / 2);
+	width: $sidebarWidth;
 	background-color: #000;
+	margin-left:-$sidebarWidth;
+	//transform: translateX(-$sidebarWidth);
+	transition: all .3s ease;
+	
 
 	nav
 	{
@@ -27,5 +39,16 @@
 			}
 		}
 
+	}
+	.sidebar-icon
+	{
+		position:absolute;
+		top:1vh;
+		right: -8vh;
+		max-width:5vw;
+		img
+		{
+			max-width:100%;
+		}
 	}
 }
