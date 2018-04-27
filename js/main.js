@@ -7,11 +7,12 @@ const MotionUi = require('motion-ui')
 
 
 // Add slide effect to sidebar
-$('.sidebar-icon').click(function()
+$('.sidebar-icon, .sidebar nav ul li a').click(function()
 {
 	$('.sidebar').toggleClass('open')
 	
 })
+
 // Bind event handlers to set up slideshow
 
 $('.slideshow-init').click(function()
@@ -62,42 +63,40 @@ function slideshowDisplay(key)
 
 // Show web content
 
-$('#web-dev-link').click(()=>
+$('#web-dev-link').click( ()=>
 {
-	fetch(' http://localhost/projects/my_portfolio/web-dev.html', 
-		(err,meta,body)=>
+	$('#loaded-content').load('web-dev.html')
+
+	setTimeout(function()
+	{
+		$('.web-dev-link-item > a').click(function()
 		{
-			$('#loaded-content').html(body.toString())
-			$('.web-dev-link-item > a').click(function()
+			var url = this.dataset.url
+			var iframe = $('.iframe-container > iframe')
+			$('.iframe-container > iframe').attr('src', url)
+
+			$('.iframe-container').fadeIn(500, function()
 			{
-				var url = this.dataset.url
-				var iframe = $('.iframe-container > iframe')
-				console.log(iframe, url)
-				$('.iframe-container > iframe').attr('src', url)
-
-		
+				$('iframe').fadeIn(500)
 			})
+
 		})
-
-
+	}, 1000)
 	
 })
 
 $('#about').click(()=>
 {
-	fetch(' http://localhost/projects/my_portfolio/about.html', 
-		(err,meta,body)=>
-		{
-			$('#loaded-content').html(body.toString())
-			iframeSelect()
-		})
+	
+			$('#loaded-content').load('about.html')
+		
 	
 })
 
-function showContent()
-{
-	$('#img-container').attr('src', 'http://mariamagichand.ie')
-}
+// function showContent()
+// {
+// 	$('#img-container').attr('src', 'http://mariamagichand.ie')
+// }
 
 // Set the URL src of the iframe to the data-url of the link
 
@@ -111,25 +110,3 @@ function iframeSelect()
 		$('#iframe-container > iframe').attr('src', url)
 	})
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
