@@ -172,22 +172,25 @@ a {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-color: #000000;
   background-color: rgba(0, 0, 0, 0.8);
   text-align: center; }
 
 #slide-container {
   position: relative;
-  width: 50%;
-  max-height: 400px;
+  height: 100%;
   margin: 1em auto;
   background-color: #000000; }
-  @media (max-width: 640px) {
+  @media (max-width: 512px) {
     #slide-container {
-      width: 100%; } }
+      width: 100%;
+      height: auto; } }
 
 #slide-container img {
-  width: 100%; }
+  height: 80%; }
+  @media (max-width: 512px) {
+    #slide-container img {
+      height: auto;
+      width: 100%; } }
 
 .slide-navigation {
   position: absolute;

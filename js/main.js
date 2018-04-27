@@ -10,17 +10,6 @@ const MotionUi = require('motion-ui')
 $('.sidebar-icon').click(function()
 {
 	$('.sidebar').toggleClass('open')
-	// if($('.sidebar').data('active') == 'false')
-	// {
-		
-	// 	$('.sidebar').addClass('slide-in')
-	// }
-	// else
-	// {
-
-	// 	$('.sidebar').removeClass('slide-in').addClass('slide-Out')
-		
-	// }
 	
 })
 // Bind event handlers to set up slideshow
