@@ -6,6 +6,7 @@ body
 	color:white;
 	text-align: center;
 	@include fluid-type($min_width, $max_width, $min_font, $max_font);
+	background-color:#000;
 }
 
 main

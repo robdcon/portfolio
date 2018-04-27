@@ -1,8 +1,9 @@
 //Gulp configuration
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
+var gulp = require('gulp'),
+	sass = require('gulp-sass'),
+	autoprefixer = require('gulp-autoprefixer'),
+	watch = require('gulp-watch')
 // var imagemin = require('gulp-imagemin');
 // var newer = require('gulp-newer');
 // var htmlclean = require('gulp-htmlclean');
@@ -11,10 +12,17 @@ var autoprefixer = require('gulp-autoprefixer');
 gulp.task('sass', ()=>
 {
 	gulp.src('sass/main.scss')
-	.pipe(sass())
-	.pipe(autoprefixer())
-	.pipe(gulp.dest('css/'))
+		.pipe(sass())
+		.pipe(autoprefixer())
+		.pipe(gulp.dest('css/'))
+	
 })
+
+gulp.task('watch', ()=>
+{
+	gulp.watch('sass/**/*', ['sass'])
+})
+gulp.task('run', ['watch'])
 // Compress images for productions 
 // gulp.task('images', ()=> 
 // {
