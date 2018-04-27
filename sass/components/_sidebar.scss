@@ -1,13 +1,24 @@
 /* SIDEBAR NAV */
-
-.sidebar
+ 
+$sidebarWidth : (100vw / 2.6);
+.open
+{
+	transform: translateX($sidebarWidth);
+}
+.closed
 {
 	
-	display:inline-block;
-	float:left;
+}
+.sidebar
+{
+	position:absolute;
 	height: 100%;
-	width:25%;
+	width: $sidebarWidth;
 	background-color: #000;
+	margin-left:-$sidebarWidth;
+	//transform: translateX(-$sidebarWidth);
+	transition: all .3s ease;
+	
 
 	nav
 	{
@@ -21,17 +32,23 @@
 		{
 			display:block;
 			padding:.5em;
+
+			a
+			{
+				text-decoration:none;
+			}
 		}
 
-		a
+	}
+	.sidebar-icon
+	{
+		position:absolute;
+		top:1vh;
+		right: -8vh;
+		max-width:5vw;
+		img
 		{
-			font-family:$main_font;
-			font-size: $h3;
-			color: $link-initial;
-
-			&:hover{ color: $link-hover };
-			&:active{ color: $link-hover };
-			
+			max-width:100%;
 		}
 	}
 }

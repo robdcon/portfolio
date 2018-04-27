@@ -1,14 +1,11 @@
+
 body
 {
 	box-sizing:border-box;
 	font-family: 'Exo 2', sans-serif;
 	color:white;
 	text-align: center;
-}
-a
-{
-	color: #fff;
-	text-decoration: none;
+	@include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
 main
@@ -24,7 +21,7 @@ main
 {
 
 	
-	width: 100%;
+	width: 100vw;
 	height:100vh;	
 }
 /*#test

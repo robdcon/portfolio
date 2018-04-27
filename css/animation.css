@@ -1,10 +1,10 @@
 .slide-in-left
 {
-	-webkit-animation: slide 1s linear infinite;
-	animation: slide 1s linear infinite;
-	-moz-animation: slide 1s;
-	-o-animation: slide 1s;
-	-ms-animation: slide 1s;
+	-webkit-animation: slide .1s  1;
+	animation: slide .1s  1;
+	-moz-animation: slide .1s 1;
+	-o-animation: slide .1s 1;
+	-ms-animation: slide .1s 1;
 	
 }
 
