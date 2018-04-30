@@ -65,23 +65,25 @@ function slideshowDisplay(key)
 
 $('#web-dev-link').click( ()=>
 {
-	$('#loaded-content').load('web-dev.html')
+	$('#loaded-content').load('webdev.html')
+
 
 	setTimeout(function()
 	{
-		$('.web-dev-link-item > a').click(function()
-		{
-			var url = this.dataset.url
-			var iframe = $('.iframe-container > iframe')
-			$('.iframe-container > iframe').attr('src', url)
+		$('.web-dev-item').removeClass('hide')
+	// 	$('.web-dev-link-item > a').click(function()
+	// 	{
+	// 		var url = this.dataset.url
+	// 		var iframe = $('.iframe-container > iframe')
+	// 		$('.iframe-container > iframe').attr('src', url)
 
-			$('.iframe-container').fadeIn(500, function()
-			{
-				$('iframe').fadeIn(500)
-			})
+	// 		$('.iframe-container').fadeIn(500, function()
+	// 		{
+	// 			$('iframe').fadeIn(500)
+	// 		})
 
-		})
-	}, 1000)
+	// 	})
+	}, 500)
 	
 })
 
