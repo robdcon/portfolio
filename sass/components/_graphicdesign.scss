@@ -1,5 +1,5 @@
 /* WEB DEVELOPMENT IFRAME PAGE */
-#web-dev
+#graphic-design
 {
 	display: none;
 
@@ -14,7 +14,7 @@
 	}
 }
 
-#web-dev-item-container
+#graphic-design-item-container
 {
 	width: 100%;
 	display: inline-block;
@@ -26,7 +26,7 @@
 
 
 
-.web-dev-item
+.graphic-design-item
 {
 	padding: 1em;
     float: left;
@@ -57,7 +57,7 @@
 		width:calc(90vw/1);
 	}
 
-	.web-dev-link-item
+	.graphic-design-link-item
 	{
 
 		display: flex;
@@ -78,7 +78,7 @@
 
 	}
 }
-div.web-dev-item.hide
+div.graphic-design-item.hide
 {
 	margin-top:-200px;
 	opacity:0;

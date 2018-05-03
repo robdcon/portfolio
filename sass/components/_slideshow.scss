@@ -19,14 +19,17 @@
 {
 	position: relative;
 	height:100%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 	@media(max-width:512px)
 	{
-		width:100%;
-		height:auto;
+		width: 90%;
+	    height: 100%;
 	}
 	
-	margin:1em auto;
+	margin:0 auto;
 	background-color: #000000;
 }
 
@@ -45,13 +48,18 @@
 .slide-navigation
 {
 	position: absolute;
-	width: 100%;
+	display: flex;
+    justify-content: space-evenly;
 	top:45%;
+	width:100%;
+	height:10%;
+	
 }
 
 #next,#prev
 {
-	position: absolute;
+	
+	display:inline-block;
 	background-color: transparent;
 	width: 34px;
 	height: 49px;
@@ -59,22 +67,28 @@
 
 #next
 {
-
-	background-image: url(../images/icons/right-icon.png) ;
-	right: 0;
+	margin-right: -20px;
+    float: right;
+	background-image: url(../images/icons/right-icon.png);
+	&:hover
+	{
+		background-image: url(../images/icons/right-icon-hover.png) ;
+	}
 }
+
+
 
 #prev
 {
+	margin-left: -20px;
+    float: left;
 	background-image: url(../images/icons/left-icon.png) ;
-	left: 0;
-}
-#next:hover
-{
-	background-image: url(../images/icons/right-icon-hover.png) ;
-}
+	&:hover
+	{
+		background-image: url(../images/icons/left-icon-hover.png) ;
+	}
+}	
 
-#prev:hover
-{
-	background-image: url(../images/icons/left-icon-hover.png) ;
-}
+
+
+

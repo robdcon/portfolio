@@ -1,0 +1,103 @@
+@import './animations';
+
+.skills
+{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:100%;
+}
+
+.skills-container
+{
+	display:flex;
+
+}
+
+$iconWidth:calc(90vw/3);
+
+.skill-icon
+{
+	
+    height: $iconWidth;
+    width: $iconWidth;
+    background-size: cover;
+   
+    transition: all .5s;
+}
+
+div.skill-icon.hide
+{
+	top:-200px;
+	//opacity:0;
+}
+
+// Animation effect for skill category icons
+
+@keyframes animGraph
+{
+	0%{background-image:url('../images/icons/aboutgraph.jpg');}
+	50%{background-image:url('../images/icons/aboutgraph_invert.jpg');}
+	100%{background-image:url('../images/icons/aboutgraph.jpg');}
+}
+@keyframes animArt 
+{
+	
+	0%{background-image:url('../images/icons/aboutart.jpg');}
+	50%{background-image:url('../images/icons/aboutart_invert.jpg');}
+	100%{background-image:url('../images/icons/aboutart.jpg');}
+}
+@keyframes animWeb 
+{
+	
+	0%{background-image:url('../images/icons/aboutweb.jpg');}
+	50%{background-image:url('../images/icons/aboutweb_invert.jpg');}
+	100%{background-image:url('../images/icons/aboutweb.jpg');}
+}
+
+.animate-graph
+{
+	animation: animGraph 1s ease-in;
+}
+.animate-art
+{
+	animation: animArt 1s ease-in;
+}
+.animate-web
+{
+	animation: animWeb 1s ease-in;
+}
+
+
+
+
+.graph
+{
+	left:0;
+	background-image: url('../images/icons/aboutgraph.jpg');
+
+	&:hover
+	{
+		background-image:url('../images/icons/aboutgraph_invert.jpg');
+	}
+}
+.art
+{
+	left:calc(100vw/3);
+	background-image: url(../images/icons/aboutart.jpg);
+
+	&:hover
+	{
+		background-image:url('../images/icons/aboutart_invert.jpg');
+	}
+}
+.dev
+{
+	left:calc((100vw/3)*2);
+	background-image: url(../images/icons/aboutweb.jpg);
+
+	&:hover
+	{
+		background-image:url('../images/icons/aboutweb_invert.jpg');
+	}
+}

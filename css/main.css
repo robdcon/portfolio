@@ -129,6 +129,18 @@ nav.navbar {
   nav.navbar .navbar-collapse {
     background-color: black; }
 
+button {
+  font-family: "Exo 2", sans-serif;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all, 0.25s; }
+  button:hover {
+    color: #ff0000; }
+  button:active {
+    color: #ff0000; }
+
 a {
   font-family: "Exo 2", sans-serif;
   color: #ffffff;
@@ -144,12 +156,17 @@ a {
   -webkit-transform: translateX(38.46154vw);
           transform: translateX(38.46154vw); }
 
+.sidebar-icon-active {
+  -webkit-transform: translateX(-35px);
+          transform: translateX(-35px); }
+
 .sidebar {
   position: absolute;
   height: 100%;
   width: 38.46154vw;
   background-color: #000;
   margin-left: -38.46154vw;
+  z-index: 99999;
   transition: all .3s ease; }
   .sidebar nav ul {
     padding: 1em 0;
@@ -161,11 +178,39 @@ a {
       text-decoration: none; }
   .sidebar .sidebar-icon {
     position: absolute;
-    top: 1%;
+    top: 5px;
     right: -11%;
-    max-width: 10%; }
+    max-width: 10%;
+    transition: all 0.5s; }
+    @media (max-width: 411px) {
+      .sidebar .sidebar-icon {
+        position: absolute;
+        top: 5px;
+        right: -20%;
+        max-width: 20%;
+        margin-right: -5px; } }
     .sidebar .sidebar-icon img {
       max-width: 100%; }
+
+.animate-icon {
+  -webkit-animation: animMenuIcon 1s ease;
+          animation: animMenuIcon 1s ease; }
+
+@-webkit-keyframes animMenuIcon {
+  0% {
+    background-image: url("../images/icons/aboutweb.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutweb.jpg"); } }
+
+@keyframes animMenuIcon {
+  0% {
+    background-image: url("../images/icons/aboutweb.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutweb.jpg"); } }
 
 /* SLIDESHOW */
 #slideshow, #slide-container {
@@ -181,12 +226,15 @@ a {
 #slide-container {
   position: relative;
   height: 100%;
-  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
   background-color: #000000; }
   @media (max-width: 512px) {
     #slide-container {
-      width: 100%;
-      height: auto; } }
+      width: 90%;
+      height: 100%; } }
 
 #slide-container img {
   height: 80%; }
@@ -197,28 +245,31 @@ a {
 
 .slide-navigation {
   position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  top: 45%;
   width: 100%;
-  top: 45%; }
+  height: 10%; }
 
 #next, #prev {
-  position: absolute;
+  display: inline-block;
   background-color: transparent;
   width: 34px;
   height: 49px; }
 
 #next {
-  background-image: url(../images/icons/right-icon.png);
-  right: 0; }
+  margin-right: -20px;
+  float: right;
+  background-image: url(../images/icons/right-icon.png); }
+  #next:hover {
+    background-image: url(../images/icons/right-icon-hover.png); }
 
 #prev {
-  background-image: url(../images/icons/left-icon.png);
-  left: 0; }
-
-#next:hover {
-  background-image: url(../images/icons/right-icon-hover.png); }
-
-#prev:hover {
-  background-image: url(../images/icons/left-icon-hover.png); }
+  margin-left: -20px;
+  float: left;
+  background-image: url(../images/icons/left-icon.png); }
+  #prev:hover {
+    background-image: url(../images/icons/left-icon-hover.png); }
 
 /* IFRAME */
 iframe {
@@ -239,11 +290,14 @@ iframe {
 
 /* WEB DEVELOPMENT IFRAME PAGE */
 #web-dev {
-  display: inline-block;
+  display: none;
   text-align: center;
   width: 100%;
   height: 100%;
   margin: 0 auto; }
+  @media (max-width: 411px) {
+    #web-dev {
+      height: auto; } }
 
 #web-dev-item-container {
   width: 100%;
@@ -279,7 +333,7 @@ iframe {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
     border: 1px solid #fff;
     height: 100%;
     width: 100%; }
@@ -293,6 +347,162 @@ div.web-dev-item.hide {
 
 .reveal {
   opacity: 1; }
+
+/* WEB DEVELOPMENT IFRAME PAGE */
+#graphic-design {
+  display: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto; }
+  @media (max-width: 411px) {
+    #graphic-design {
+      height: auto; } }
+
+#graphic-design-item-container {
+  width: 100%;
+  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.graphic-design-item {
+  padding: 1em;
+  float: left;
+  height: 200px;
+  opacity: 1;
+  margin-top: 0;
+  transition: all 0.5s; }
+  @media (max-width: 1400px) {
+    .graphic-design-item {
+      width: calc(90vw/4); } }
+  @media (max-width: 1080px) {
+    .graphic-design-item {
+      width: calc(90vw/3); } }
+  @media (max-width: 728px) {
+    .graphic-design-item {
+      width: calc(90vw/2); } }
+  @media (max-width: 411px) {
+    .graphic-design-item {
+      width: calc(90vw/1); } }
+  .graphic-design-item .graphic-design-link-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: black;
+    border: 1px solid #fff;
+    height: 100%;
+    width: 100%; }
+    .graphic-design-item .graphic-design-link-item p {
+      font-size: .75em;
+      padding: 0.5em; }
+
+div.graphic-design-item.hide {
+  margin-top: -200px;
+  opacity: 0; }
+
+.reveal {
+  opacity: 1; }
+
+.skills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; }
+
+.skills-container {
+  display: flex; }
+
+.skill-icon {
+  height: calc(90vw/3);
+  width: calc(90vw/3);
+  background-size: cover;
+  transition: all .5s; }
+
+div.skill-icon.hide {
+  top: -200px; }
+
+@-webkit-keyframes animGraph {
+  0% {
+    background-image: url("../images/icons/aboutgraph.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutgraph.jpg"); } }
+
+@keyframes animGraph {
+  0% {
+    background-image: url("../images/icons/aboutgraph.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutgraph.jpg"); } }
+
+@-webkit-keyframes animArt {
+  0% {
+    background-image: url("../images/icons/aboutart.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutart_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutart.jpg"); } }
+
+@keyframes animArt {
+  0% {
+    background-image: url("../images/icons/aboutart.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutart_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutart.jpg"); } }
+
+@-webkit-keyframes animWeb {
+  0% {
+    background-image: url("../images/icons/aboutweb.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutweb.jpg"); } }
+
+@keyframes animWeb {
+  0% {
+    background-image: url("../images/icons/aboutweb.jpg"); }
+  50% {
+    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+  100% {
+    background-image: url("../images/icons/aboutweb.jpg"); } }
+
+.animate-graph {
+  -webkit-animation: animGraph 1s ease-in;
+          animation: animGraph 1s ease-in; }
+
+.animate-art {
+  -webkit-animation: animArt 1s ease-in;
+          animation: animArt 1s ease-in; }
+
+.animate-web {
+  -webkit-animation: animWeb 1s ease-in;
+          animation: animWeb 1s ease-in; }
+
+.graph {
+  left: 0;
+  background-image: url("../images/icons/aboutgraph.jpg"); }
+  .graph:hover {
+    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+
+.art {
+  left: calc(100vw/3);
+  background-image: url(../images/icons/aboutart.jpg); }
+  .art:hover {
+    background-image: url("../images/icons/aboutart_invert.jpg"); }
+
+.dev {
+  left: calc((100vw/3)*2);
+  background-image: url(../images/icons/aboutweb.jpg); }
+  .dev:hover {
+    background-image: url("../images/icons/aboutweb_invert.jpg"); }
 
 body {
   box-sizing: border-box;
