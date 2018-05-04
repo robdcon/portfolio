@@ -75,53 +75,77 @@ $('#home').click(()=>
 		
 })
 
-// Loads web dev content
+// Reveal web dev content
+function revealWebContent()
+{
+	$('#web-dev').fadeIn(250)
+	$('.web-dev-item').removeClass('hide')
+}
+
+//Reveal Graphic design content
+function revealGraphicsContent()
+{
+	$('#graphic-design').fadeIn(250)
+	$('.graphic-design-item').removeClass('hide')
+}
+
+//Reveal Graphic design content
+function revealAboutContent()
+{
+	$('#about-page').fadeIn(250)
+	$('.about-content').removeClass('hide')
+}
+
+// Bind click handlers to sidebar links
 
 $('#web-dev-link').click( ()=>
 {
 	$('#loaded-content').load('webdev.html')
-
-	setTimeout(function()
-	{
-		$('#web-dev').fadeIn(250)
-		$('.web-dev-item').removeClass('hide')
-	}, 500)
-	
+	setTimeout(revealWebContent, 500)	
 })
-
-// Loads graphic design content
 
 $('#graphic-design-link').click( ()=>
 {
 	$('#loaded-content').load('graphic-design.html')
-	
-	setTimeout(function()
-	{
-		$('#graphic-design').fadeIn(250)
-		$('.graphic-design-item').removeClass('hide')
-	}, 500)
+	setTimeout(revealGraphicsContent, 500)
 	
 })
-
-// Loads About page
 
 $('#about').click(()=>
 {
 	
 	$('#loaded-content').load('about.html')
-	setTimeout(()=>
-	{
-		$('#about-content').fadeIn(500)
-
-	},500);
+	setTimeout(revealAboutContent, 500);
 		
 })
-
+// Icon animations
+var animateGraph = () =>
+{
+	$('.graph').addClass('animate-graph')
+}
+var animateWeb = () =>
+{
+	$('.dev').addClass('animate-web')
+}
+var animateArt = () =>
+{
+	$('.art').addClass('animate-art')
+}
+// Reveal the corresponding text when an icon is hovered over
+function revealAboutText()
+{
+	$('.skill-icon').on('hover', (ev)=>
+	{
+		var target = $(ev.target).attr('rel') + '-text'
+		
+		$('[rel='+target+']').toggleClass('hide')
+	})
+}
 // Load home page on page load
 
 $(document).ready(()=>
 {
-	
+
 	$('#loaded-content').load('home.html')
 
 	setTimeout(()=>
@@ -129,23 +153,22 @@ $(document).ready(()=>
 		$('.skill-icon').removeClass('hide')
 
 	},500);
-	setTimeout(()=>
-	{
-		$('.menu-icon').addClass('animate-menu-icon')
 
-	},500);
+	// // Apply animations to icons
+	// setTimeout(()=>
+	// {
+	// 	$('.menu-icon').addClass('animate-menu-icon')
 
-	setTimeout(()=>
-	{
-		$('.graph').addClass('animate-graph')
-	}, 660)
-	setTimeout(()=>
-	{
-		$('.art').addClass('animate-art')
-	}, 1600)
-	setTimeout(()=>
-	{
-		$('.dev').addClass('animate-web')
-	}, 2400)
+	// },500);
+
+	// setTimeout(animateGraph, 250)
+	// setTimeout(animateArt, 500)
+	// setTimeout(animateWeb, 750)
+
+	setTimeout(revealAboutText, 1000)
+	
+	// Load main content on page load and reveal items after delay
+	
+
 		
 })

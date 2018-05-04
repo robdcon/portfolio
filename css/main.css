@@ -295,9 +295,6 @@ iframe {
   width: 100%;
   height: 100%;
   margin: 0 auto; }
-  @media (max-width: 411px) {
-    #web-dev {
-      height: auto; } }
 
 #web-dev-item-container {
   width: 100%;
@@ -305,6 +302,7 @@ iframe {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center; }
 
 .web-dev-item {
@@ -317,10 +315,10 @@ iframe {
   @media (max-width: 1400px) {
     .web-dev-item {
       width: calc(90vw/4); } }
-  @media (max-width: 1080px) {
+  @media (max-width: 1024px) {
     .web-dev-item {
-      width: calc(90vw/3); } }
-  @media (max-width: 728px) {
+      width: calc(90vw/2); } }
+  @media (max-width: 768px) {
     .web-dev-item {
       width: calc(90vw/2); } }
   @media (max-width: 411px) {
@@ -362,6 +360,7 @@ div.web-dev-item.hide {
 #graphic-design-item-container {
   width: 100%;
   display: inline-block;
+  align-items: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -376,13 +375,13 @@ div.web-dev-item.hide {
   transition: all 0.5s; }
   @media (max-width: 1400px) {
     .graphic-design-item {
-      width: calc(90vw/4); } }
+      width: calc(90vw/2); } }
   @media (max-width: 1080px) {
     .graphic-design-item {
-      width: calc(90vw/3); } }
-  @media (max-width: 728px) {
-    .graphic-design-item {
       width: calc(90vw/2); } }
+  @media (max-width: 768px) {
+    .graphic-design-item {
+      width: calc(90vw/1); } }
   @media (max-width: 411px) {
     .graphic-design-item {
       width: calc(90vw/1); } }
@@ -408,101 +407,115 @@ div.graphic-design-item.hide {
 .reveal {
   opacity: 1; }
 
-.skills {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%; }
+.about-skills {
+  width: 80%;
+  display: inline-block;
+  padding: 5%;
+  margin: 1em; }
 
-.skills-container {
+.about-display {
+  width: 100%;
+  height: 200px;
+  padding: 5%;
+  background-color: #000; }
+
+.about-skills-container {
   display: flex; }
 
+.about-text.hide {
+  display: none; }
+
+.about-text {
+  display: block;
+  transition: all 1s ease; }
+
 .skill-icon {
-  height: calc(90vw/3);
-  width: calc(90vw/3);
+  height: calc(100%/3);
+  width: calc(100%/3);
   background-size: cover;
-  transition: all .5s; }
+  background-position: center center;
+  transition: all 1s; }
 
 div.skill-icon.hide {
-  top: -200px; }
+  top: -500px; }
 
-@-webkit-keyframes animGraph {
+@-webkit-keyframes anim-graph {
   0% {
-    background-image: url("../images/icons/aboutgraph.jpg"); }
+    background-image: url("../img/icons/aboutgraph.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+    background-image: url("../img/icons/aboutgraph_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutgraph.jpg"); } }
+    background-image: url("../img/icons/aboutgraph.jpg"); } }
 
-@keyframes animGraph {
+@keyframes anim-graph {
   0% {
-    background-image: url("../images/icons/aboutgraph.jpg"); }
+    background-image: url("../img/icons/aboutgraph.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+    background-image: url("../img/icons/aboutgraph_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutgraph.jpg"); } }
+    background-image: url("../img/icons/aboutgraph.jpg"); } }
 
-@-webkit-keyframes animArt {
+@-webkit-keyframes anim-art {
   0% {
-    background-image: url("../images/icons/aboutart.jpg"); }
+    background-image: url("../img/icons/aboutart.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutart_invert.jpg"); }
+    background-image: url("../img/icons/aboutart_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutart.jpg"); } }
+    background-image: url("../img/icons/aboutart.jpg"); } }
 
-@keyframes animArt {
+@keyframes anim-art {
   0% {
-    background-image: url("../images/icons/aboutart.jpg"); }
+    background-image: url("../img/icons/aboutart.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutart_invert.jpg"); }
+    background-image: url("../img/icons/aboutart_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutart.jpg"); } }
+    background-image: url("../img/icons/aboutart.jpg"); } }
 
-@-webkit-keyframes animWeb {
+@-webkit-keyframes anim-web {
   0% {
-    background-image: url("../images/icons/aboutweb.jpg"); }
+    background-image: url("../img/icons/aboutweb.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+    background-image: url("../img/icons/aboutweb_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutweb.jpg"); } }
+    background-image: url("../img/icons/aboutweb.jpg"); } }
 
-@keyframes animWeb {
+@keyframes anim-web {
   0% {
-    background-image: url("../images/icons/aboutweb.jpg"); }
+    background-image: url("../img/icons/aboutweb.jpg"); }
   50% {
-    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+    background-image: url("../img/icons/aboutweb_invert.jpg"); }
   100% {
-    background-image: url("../images/icons/aboutweb.jpg"); } }
+    background-image: url("../img/icons/aboutweb.jpg"); } }
 
 .animate-graph {
-  -webkit-animation: animGraph 1s ease-in;
-          animation: animGraph 1s ease-in; }
+  -webkit-animation: anim-graph 1s ease-in;
+          animation: anim-graph 1s ease-in; }
 
 .animate-art {
-  -webkit-animation: animArt 1s ease-in;
-          animation: animArt 1s ease-in; }
+  -webkit-animation: anim-art 1s ease-in;
+          animation: anim-art 1s ease-in; }
 
 .animate-web {
-  -webkit-animation: animWeb 1s ease-in;
-          animation: animWeb 1s ease-in; }
+  -webkit-animation: anim-web 1s ease-in;
+          animation: anim-web 1s ease-in; }
 
 .graph {
   left: 0;
-  background-image: url("../images/icons/aboutgraph.jpg"); }
+  background-image: url("../img/icons/aboutgraph.jpg"); }
   .graph:hover {
-    background-image: url("../images/icons/aboutgraph_invert.jpg"); }
+    background-image: url("../img/icons/aboutgraph_invert.jpg"); }
 
 .art {
   left: calc(100vw/3);
-  background-image: url(../images/icons/aboutart.jpg); }
+  background-image: url(../img/icons/aboutart.jpg); }
   .art:hover {
-    background-image: url("../images/icons/aboutart_invert.jpg"); }
+    background-image: url("../img/icons/aboutart_invert.jpg"); }
 
 .dev {
   left: calc((100vw/3)*2);
-  background-image: url(../images/icons/aboutweb.jpg); }
+  background-image: url(../img/icons/aboutweb.jpg); }
   .dev:hover {
-    background-image: url("../images/icons/aboutweb_invert.jpg"); }
+    background-image: url("../img/icons/aboutweb_invert.jpg"); }
 
 body {
   box-sizing: border-box;
@@ -523,6 +536,10 @@ main {
   width: 75%;
   display: inline-block;
   float: left; }
+
+#loaded-content {
+  height: 100%;
+  width: 100%; }
 
 /* PANELS */
 .panel {

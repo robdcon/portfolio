@@ -1,20 +1,37 @@
-@import './animations';
 
-.skills
+
+.about-skills
 {
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	height:100%;
+	width:80%;
+	display: inline-block;
+    padding: 5%;
+    margin:1em;
+}
+.about-display
+{
+    width: 100%;
+    height: 200px;
+    padding:5%;
+    
+    background-color: #000;
 }
 
-.skills-container
+.about-skills-container
 {
 	display:flex;
 
 }
+.about-text.hide
+{
+	display:none;
+}
+.about-text
+{
+	display:block;
+	transition: all 1s ease;
+}
 
-$iconWidth:calc(90vw/3);
+$iconWidth:calc(100%/3);
 
 .skill-icon
 {
@@ -22,50 +39,50 @@ $iconWidth:calc(90vw/3);
     height: $iconWidth;
     width: $iconWidth;
     background-size: cover;
+    background-position: center center;
    
-    transition: all .5s;
+    transition: all 1s;
 }
 
 div.skill-icon.hide
 {
-	top:-200px;
-	//opacity:0;
+	top:-500px;
 }
 
 // Animation effect for skill category icons
 
-@keyframes animGraph
+@keyframes anim-graph
 {
-	0%{background-image:url('../images/icons/aboutgraph.jpg');}
-	50%{background-image:url('../images/icons/aboutgraph_invert.jpg');}
-	100%{background-image:url('../images/icons/aboutgraph.jpg');}
+	0%{background-image:url('../img/icons/aboutgraph.jpg');}
+	50%{background-image:url('../img/icons/aboutgraph_invert.jpg');}
+	100%{background-image:url('../img/icons/aboutgraph.jpg');}
 }
-@keyframes animArt 
+@keyframes anim-art 
 {
 	
-	0%{background-image:url('../images/icons/aboutart.jpg');}
-	50%{background-image:url('../images/icons/aboutart_invert.jpg');}
-	100%{background-image:url('../images/icons/aboutart.jpg');}
+	0%{background-image:url('../img/icons/aboutart.jpg');}
+	50%{background-image:url('../img/icons/aboutart_invert.jpg');}
+	100%{background-image:url('../img/icons/aboutart.jpg');}
 }
-@keyframes animWeb 
+@keyframes anim-web 
 {
 	
-	0%{background-image:url('../images/icons/aboutweb.jpg');}
-	50%{background-image:url('../images/icons/aboutweb_invert.jpg');}
-	100%{background-image:url('../images/icons/aboutweb.jpg');}
+	0%{background-image:url('../img/icons/aboutweb.jpg');}
+	50%{background-image:url('../img/icons/aboutweb_invert.jpg');}
+	100%{background-image:url('../img/icons/aboutweb.jpg');}
 }
 
 .animate-graph
 {
-	animation: animGraph 1s ease-in;
+	animation: anim-graph 1s ease-in;
 }
 .animate-art
 {
-	animation: animArt 1s ease-in;
+	animation: anim-art 1s ease-in;
 }
 .animate-web
 {
-	animation: animWeb 1s ease-in;
+	animation: anim-web 1s ease-in;
 }
 
 
@@ -74,30 +91,30 @@ div.skill-icon.hide
 .graph
 {
 	left:0;
-	background-image: url('../images/icons/aboutgraph.jpg');
+	background-image: url('../img/icons/aboutgraph.jpg');
 
 	&:hover
 	{
-		background-image:url('../images/icons/aboutgraph_invert.jpg');
+		background-image:url('../img/icons/aboutgraph_invert.jpg');
 	}
 }
 .art
 {
 	left:calc(100vw/3);
-	background-image: url(../images/icons/aboutart.jpg);
+	background-image: url(../img/icons/aboutart.jpg);
 
 	&:hover
 	{
-		background-image:url('../images/icons/aboutart_invert.jpg');
+		background-image:url('../img/icons/aboutart_invert.jpg');
 	}
 }
 .dev
 {
 	left:calc((100vw/3)*2);
-	background-image: url(../images/icons/aboutweb.jpg);
+	background-image: url(../img/icons/aboutweb.jpg);
 
 	&:hover
 	{
-		background-image:url('../images/icons/aboutweb_invert.jpg');
+		background-image:url('../img/icons/aboutweb_invert.jpg');
 	}
 }

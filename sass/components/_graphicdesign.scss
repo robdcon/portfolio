@@ -17,8 +17,9 @@
 #graphic-design-item-container
 {
 	width: 100%;
-	display: inline-block;
-	display: flex;
+    display: inline-block;
+    align-items: center;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,15 +43,15 @@
 
 	@media(max-width:1400px)
 	{
-		width:calc(90vw/4);
+		width:calc(90vw/2);
 	}
 	@media(max-width:1080px)
 	{
-		width:calc(90vw/3);
-	}
-	@media(max-width:728px)
-	{
 		width:calc(90vw/2);
+	}
+	@media(max-width:768px)
+	{
+		width:calc(90vw/1);
 	}
 	@media(max-width:411px)
 	{

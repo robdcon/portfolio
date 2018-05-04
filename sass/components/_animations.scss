@@ -1,0 +1,6 @@
+// Animation for changing icon effect on about page
+@keyframes animIcon 
+{
+	0%{background-image: url('../images/icons/aboutgraph.jpg');}
+	100%{background-image:url('../images/icons/aboutgraph_invert.jpg');}
+}
