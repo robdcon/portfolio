@@ -2,9 +2,6 @@ const $ = require('jquery-browserify')
 const slideshow = require('./slideshow')()
 const fetch = require('fetch').fetchUrl
 
-
-$(document).ready(()=>{console.log('updated')})
-
 // Add slide effect to sidebar
 $('.sidebar-icon, .sidebar nav ul li a').click(function()
 {
@@ -15,18 +12,21 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 
 // Bind event handlers to set up slideshow
 
-$('.slideshow-init').click(function()
+function initSlideshow()
 {
-	const key = (this.id)
-
-	$('#loaded-content').load('slideshow.html', function()
+	$('.slideshow-init').click(function(ev)
 	{
-		slideshowDisplay(key)
-		bindControls()
+		const key = ($(this).attr('rel'))
 
-	})	
-	
-})
+		$('#loaded-content').load('slideshow.html', function()
+		{
+			slideshowDisplay(key)
+			bindControls()
+
+		})	
+		
+	})
+}
 
 function bindControls()
 {
@@ -53,12 +53,10 @@ function bindControls()
 function slideshowDisplay(key)
 {
 		
-	$('#slideshow').fadeIn(500, function()
-	{
-		slideshow.init(key)
-		$('#slide-container').fadeIn(500)
+	$('#slideshow, #slide-container').fadeIn(500)
 		
-	})
+	slideshow.init(key)
+		
 }
 
 // Loads home page content
@@ -72,6 +70,7 @@ $('#home').click(()=>
 		$('.skill-icon').removeClass('hide')
 
 	},500);
+	setTimeout(revealAboutText, 1000) // Wait for DOM elements to load before binding events
 		
 })
 
@@ -87,6 +86,7 @@ function revealGraphicsContent()
 {
 	$('#graphic-design').fadeIn(250)
 	$('.graphic-design-item').removeClass('hide')
+	
 }
 
 //Reveal Graphic design content
@@ -96,7 +96,7 @@ function revealAboutContent()
 	$('.about-content').removeClass('hide')
 }
 
-// Bind click handlers to sidebar links
+// Bind click handlers to sidebar links once DOM elements have loaded by delaying with setTimeout function
 
 $('#web-dev-link').click( ()=>
 {
@@ -108,6 +108,7 @@ $('#graphic-design-link').click( ()=>
 {
 	$('#loaded-content').load('graphic-design.html')
 	setTimeout(revealGraphicsContent, 500)
+	setTimeout(initSlideshow, 1000)
 	
 })
 
@@ -136,8 +137,9 @@ function revealAboutText()
 {
 	$('.skill-icon').on('hover', (ev)=>
 	{
-		var target = $(ev.target).attr('rel') + '-text'
-		
+		var id = $(ev.target).attr('rel')
+
+		var target = id + '-text'
 		$('[rel='+target+']').toggleClass('hide')
 	})
 }
@@ -167,7 +169,8 @@ $(document).ready(()=>
 
 	setTimeout(revealAboutText, 1000)
 	
-	// Load main content on page load and reveal items after delay
+	//bind event to artwork link to display slideshow
+	initSlideshow()
 	
 
 		

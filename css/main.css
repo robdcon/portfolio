@@ -230,14 +230,14 @@ a {
   display: inline-block;
   margin: 1em auto;
   background-color: #000000; }
-  @media (max-width: 512px) {
+  @media (max-width: 768px) {
     #slide-container {
-      width: 90%;
+      max-width: 100%;
       height: 100%; } }
 
 #slide-container img {
   height: 80%; }
-  @media (max-width: 512px) {
+  @media (max-width: 768px) {
     #slide-container img {
       height: auto;
       width: 100%; } }
@@ -247,9 +247,6 @@ a {
   top: 45%;
   width: 100%;
   height: 10%; }
-  @media (max-width: 520px) {
-    .slide-navigation {
-      position: relative; } }
 
 #next, #prev {
   display: inline-block;
@@ -406,10 +403,14 @@ div.graphic-design-item.hide {
   opacity: 1; }
 
 .about-skills {
-  width: 80%;
-  display: inline-block;
-  padding: 5%;
-  margin: 1em; }
+  width: 70%;
+  display: inline-block; }
+  .about-skills h1 {
+    font-size: 2em;
+    margin: 1em auto; }
+
+#about-skills-header {
+  margin: 1em auto; }
 
 .about-display {
   width: 100%;
@@ -432,7 +433,7 @@ div.graphic-design-item.hide {
   width: calc(100%/3);
   background-size: cover;
   background-position: center center;
-  transition: all 1s;
+  transition: all 0.5s;
   display: inline-block;
   float: left; }
 
@@ -494,16 +495,16 @@ div.skill-icon.hide {
     background-image: url("../img/icons/aboutweb.jpg"); } }
 
 .animate-graph {
-  -webkit-animation: anim-graph 1s ease-in;
-          animation: anim-graph 1s ease-in; }
+  -webkit-animation: anim-graph 0.75s ease-in;
+          animation: anim-graph 0.75s ease-in; }
 
 .animate-art {
-  -webkit-animation: anim-art 1s ease-in;
-          animation: anim-art 1s ease-in; }
+  -webkit-animation: anim-art 0.75s ease-in;
+          animation: anim-art 0.75s ease-in; }
 
 .animate-web {
-  -webkit-animation: anim-web 1s ease-in;
-          animation: anim-web 1s ease-in; }
+  -webkit-animation: anim-web 0.75s ease-in;
+          animation: anim-web 0.75s ease-in; }
 
 .graph {
   left: 0;
@@ -538,16 +539,10 @@ body {
       body {
         font-size: 24px; } }
 
-main {
-  width: 75%;
-  display: inline-block;
-  float: left; }
-
-#loaded-content {
-  height: 100%;
-  width: 100%; }
+#landing-page {
+  width: 100%;
+  height: 100%; }
 
 /* PANELS */
 .panel {
-  width: 100vw;
-  height: 100vh; }
+  width: 100vw; }

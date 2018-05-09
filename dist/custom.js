@@ -3,9 +3,6 @@ const $ = require('jquery-browserify')
 const slideshow = require('./slideshow')()
 const fetch = require('fetch').fetchUrl
 
-
-$(document).ready(()=>{console.log('updated')})
-
 // Add slide effect to sidebar
 $('.sidebar-icon, .sidebar nav ul li a').click(function()
 {
@@ -16,18 +13,21 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 
 // Bind event handlers to set up slideshow
 
-$('.slideshow-init').click(function()
+function initSlideshow()
 {
-	const key = (this.id)
-
-	$('#loaded-content').load('slideshow.html', function()
+	$('.slideshow-init').click(function(ev)
 	{
-		slideshowDisplay(key)
-		bindControls()
+		const key = ($(this).attr('rel'))
 
-	})	
-	
-})
+		$('#loaded-content').load('slideshow.html', function()
+		{
+			slideshowDisplay(key)
+			bindControls()
+
+		})	
+		
+	})
+}
 
 function bindControls()
 {
@@ -54,12 +54,10 @@ function bindControls()
 function slideshowDisplay(key)
 {
 		
-	$('#slideshow').fadeIn(500, function()
-	{
-		slideshow.init(key)
-		$('#slide-container').fadeIn(500)
+	$('#slideshow, #slide-container').fadeIn(500)
 		
-	})
+	slideshow.init(key)
+		
 }
 
 // Loads home page content
@@ -73,6 +71,7 @@ $('#home').click(()=>
 		$('.skill-icon').removeClass('hide')
 
 	},500);
+	setTimeout(revealAboutText, 1000) // Wait for DOM elements to load before binding events
 		
 })
 
@@ -88,6 +87,7 @@ function revealGraphicsContent()
 {
 	$('#graphic-design').fadeIn(250)
 	$('.graphic-design-item').removeClass('hide')
+	
 }
 
 //Reveal Graphic design content
@@ -97,7 +97,7 @@ function revealAboutContent()
 	$('.about-content').removeClass('hide')
 }
 
-// Bind click handlers to sidebar links
+// Bind click handlers to sidebar links once DOM elements have loaded by delaying with setTimeout function
 
 $('#web-dev-link').click( ()=>
 {
@@ -109,6 +109,7 @@ $('#graphic-design-link').click( ()=>
 {
 	$('#loaded-content').load('graphic-design.html')
 	setTimeout(revealGraphicsContent, 500)
+	setTimeout(initSlideshow, 1000)
 	
 })
 
@@ -137,8 +138,9 @@ function revealAboutText()
 {
 	$('.skill-icon').on('hover', (ev)=>
 	{
-		var target = $(ev.target).attr('rel') + '-text'
-		
+		var id = $(ev.target).attr('rel')
+
+		var target = id + '-text'
 		$('[rel='+target+']').toggleClass('hide')
 	})
 }
@@ -168,7 +170,8 @@ $(document).ready(()=>
 
 	setTimeout(revealAboutText, 1000)
 	
-	// Load main content on page load and reveal items after delay
+	//bind event to artwork link to display slideshow
+	initSlideshow()
 	
 
 		
@@ -183,23 +186,21 @@ $(document).ready(()=>
 var imgContainer = $('#img-container') 
 var imgUrl = 'json/images.json'
 
-// Display content in container element as set above
-
 function displaySlide(container,content)
 {
 
-	$('#img-container').hide().html(content).fadeIn()
+	container.hide().html(content).fadeIn()
 	
 }
 
-
-
-
+// Display content in container element as set above
 
 module.exports = slideshow
 
 function slideshow() 
 {
+	var imgContainer = $('#img-container')
+
 	var targetUrl = imgUrl
 
 	var container = imgContainer
@@ -212,11 +213,15 @@ function slideshow()
 
 	var index = 0 // Private variable can be accessed by the 'next' and 'prev' closure methods
 
+	var arr = []
+
+
 	// Ajax function to GET an image data object from a JSON file
 	// The function uses the retieved data to create an image slide for use in the DOM
 
 	function getImages()
 	{
+		arr = []
 		var ajaxCall = $.get(targetUrl)
 
 		ajaxCall
@@ -224,18 +229,35 @@ function slideshow()
 		{	
 			$.each(response.images, function(j)
 			{
-				
-				if (response.images[j].category == arrayKey) 
+				$.each(response.images[j].array, (i)=>
 				{
-					arrayLength = response.images[j].array.length // Set array length to control continuous cycle through array
-	 
-	 				slide = "<img id='slide' src='" + response.images[j].array[index].url + "' alt=''></div>" +
-	 								"<div><h3>"+ response.images[j].array[index].title + "</h3></div>"	
-	 			}
-	 			
-	 		}) 
+					
+					
+					let tagArr = response.images[j].array[i].tag
+					let found = $.inArray(arrayKey, tagArr)
+					console.log(arrayKey, tagArr, found)
+					if(found != -1)
+					{
+						//console.log(response.images[j].array[i].url)
+						//console.log(response.images[j].array[i].url)
+						//arrayLength = response.images[j].array.length // Set array length to control continuous cycle through array
+		 				
+		 				
+		 				arr.push(response.images[j].array[i])
 
-	 		displaySlide(container, slide) // Display the new image in the DOM
+		 				slide = "<img id='slide' src='" + arr[index].url + "' alt=''></div>" +
+		 				"<div><h3>"+ arr[index].title + "</h3></div>"
+		 			}
+		 			console.log(arr)
+		 			
+
+				})
+				
+	 		}) 
+			displaySlide($('#img-container'), slide)
+	 		arrayLength = arr.length;
+
+	 		
 					
 		})
 		.fail(function(err)
@@ -244,8 +266,6 @@ function slideshow()
 		})
 
 	}
-
-	
 
 	// Return a object which contains methods which can access the private data
 	return  {
@@ -259,8 +279,12 @@ function slideshow()
 			{ 
 				index = 0
 			}
-
-			getImages() // Call the static function to make an ajax call based on new index parameter
+			
+			displaySlide($('#img-container'), "<img id='slide' src='" + arr[index].url + "' alt=''></div>" +
+		 				"<div><h3>"+ arr[index].title + "</h3></div>")
+			
+			//console.log(index)
+			//getImages() // Call the static function to make an ajax call based on new index parameter
 		
 		},
 	
@@ -273,13 +297,16 @@ function slideshow()
 			{
 				index = arrayLength - 1
 			}
-
-			getImages() // Call the static function to make an ajax call based on new index parameter
+			displaySlide($('#img-container'), "<img id='slide' src='" + arr[index].url + "' alt=''></div>" +
+		 				"<div><h3>"+ arr[index].title + "</h3></div>")
+			
+			//getImages() // Call the static function to make an ajax call based on new index parameter
 					
 		},
 
 		init:function(key)
 		{
+			index = 0
 			arrayKey = key // Set the private variable of Slideshow to a key corresponding to a relative key in the image json file
 
 			getImages() // Call the static function to make an ajax call based on new index parameter

@@ -1,9 +1,19 @@
+
+
 .about-skills
 {
-	width:80%;
+	width:70%;
 	display: inline-block;
-    padding: 5%;
-    margin:1em;
+
+	h1
+	{
+		font-size:2em;
+		margin: 1em auto;
+	}
+}
+#about-skills-header
+{
+	margin:1em auto;
 }
 .about-display
 {
@@ -34,7 +44,7 @@
     width: calc(100%/3);
     background-size: cover;
     background-position: center center;
-    transition: all 1s;
+    transition: all 0.5s;
     display: inline-block;
     float: left;
 }
@@ -75,15 +85,15 @@ div.skill-icon.hide
 
 .animate-graph
 {
-	animation: anim-graph 1s ease-in;
+	animation: anim-graph 0.75s ease-in;
 }
 .animate-art
 {
-	animation: anim-art 1s ease-in;
+	animation: anim-art 0.75s ease-in;
 }
 .animate-web
 {
-	animation: anim-web 1s ease-in;
+	animation: anim-web 0.75s ease-in;
 }
 
 
