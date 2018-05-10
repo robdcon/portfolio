@@ -114,7 +114,7 @@ $('#graphic-design-link').click( ()=>
 	setTimeout(initSlideshow, 1000)
 	
 })
-
+// Load about content
 $('#about').click(()=>
 {
 	
@@ -142,6 +142,12 @@ var animateWeb = () =>
 var animateArt = () =>
 {
 	$('.art').addClass('animate-art')
+}
+function iconAnimate()
+{
+	var $icons = $('.skill-icon')
+	var $text = $('.about-text')
+	
 }
 // Reveal the corresponding text when an icon is hovered over
 function revealAboutText()
@@ -174,9 +180,9 @@ $(document).ready(()=>
 
 	// },500);
 
-	// setTimeout(animateGraph, 250)
-	// setTimeout(animateArt, 500)
-	// setTimeout(animateWeb, 750)
+	setTimeout(animateGraph, 1000)
+	setTimeout(animateArt, 1500)
+	setTimeout(animateWeb, 2000)
 
 	setTimeout(revealAboutText, 1000)
 	
@@ -186,3 +192,4 @@ $(document).ready(()=>
 
 		
 })
+

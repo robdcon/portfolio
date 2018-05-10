@@ -25,4 +25,24 @@ body
 	height:100%;
 	display:none;
 }
+span.page-heading
+{
+	text-align:center;
+	margin:0 auto;
+	font-size:1.25em;
+	padding:1em;
+}
+span.page-caption
+{
+	text-align:center;
+	margin:0 auto;
+	font-size:1em;
+	padding:1em;
+	width:65%;
+	@media(max-width:512px)
+	{
+		width:95%;
+	}
+
+}
 
