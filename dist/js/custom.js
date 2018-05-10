@@ -26823,7 +26823,7 @@ function slideshow()
 			}
 			
 			displaySlide($('#img-container'), "<img id='slide' src='" + arr[index].url + "' alt=''></div>" +
-		 				"<div><h3>"+ arr[index].title + "</h3></div>")
+		 				"<div class='img-title'><h3>"+ arr[index].title + "</h3></div>")
 			
 			//console.log(index)
 			//getImages() // Call the static function to make an ajax call based on new index parameter
@@ -26840,7 +26840,7 @@ function slideshow()
 				index = arrayLength - 1
 			}
 			displaySlide($('#img-container'), "<img id='slide' src='" + arr[index].url + "' alt=''></div>" +
-		 				"<div><h3>"+ arr[index].title + "</h3></div>")
+		 				"<div class='img-title'><h3>"+ arr[index].title + "</h3></div>")
 			
 			//getImages() // Call the static function to make an ajax call based on new index parameter
 					

@@ -15,11 +15,13 @@
 }
 .about-display
 {
+	position:relative;
     width: 100%;
     min-height: 300px;
     padding:5%;
     background-color: #000;
     transition: all .25s;
+    overflow:hidden;
 
     p
     {

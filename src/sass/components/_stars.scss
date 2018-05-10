@@ -1,0 +1,39 @@
+#stars-container
+{
+	position:absolute;
+	background-color:#000;
+}
+.stars
+{
+	-webkit-animation: stars 40s linear infinite;	
+	margin-left: -600px;
+	position:absolute;
+	opacity: 0.5;
+	background-image: url(../img/stars-front.png);
+	display: inline-block;
+	height:300px;
+	width:900px;
+	
+}
+.starstwo
+{
+	-webkit-animation: starstwo 80s linear infinite;
+	margin-left: -600px;
+	position:absolute;
+	opacity: 0.6;
+	background-image: url(../img/stars-middle.png);
+	display: inline-block;
+	height:300px;
+	width:900px;
+}
+.starsthree
+{
+	-webkit-animation: starsthree 120s linear infinite;
+	margin-left: -600px;
+	position:absolute;
+	opacity: 0.7;
+	background-image: url(../img/stars-back.png);
+	display: inline-block;
+	height:300px;
+	width:900px;
+}
