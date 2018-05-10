@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 	newer = require('gulp-newer'),
 	browserify = require('gulp-browserify'),
 	browserSync = require('browser-sync').create()
-	//htmlclean = require('gulp-htmlclean')
+	htmlclean = require('gulp-htmlclean')
 
 gulp.task('browserSync', ()=>
 {
@@ -24,56 +24,48 @@ gulp.task('browserSync', ()=>
 // Run scss files through autofixer
 gulp.task('sass', ()=>
 {
-	gulp.src('sass/main.scss')
+	gulp.src('src/sass/**/*.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
-		.pipe(gulp.dest('css/'))
-		.pipe(browserSync.reload(
-		{
-			stream:true
-		}))
+		.pipe(gulp.dest('dist/css'))
 	
 })
-
 // Bundle js files for production
 gulp.task('bundle', ()=>
 {
-	gulp.src('js/components/custom.js')
+	gulp.src('src/js/custom.js')
 		.pipe(browserify())
-		.pipe(gulp.dest('dist/'))
+		.pipe(gulp.dest('dist/js'))
 })
 
 // Compress images for productions 
 gulp.task('images', ()=> 
 {
 	
-	return gulp.src('images/')
-		.pipe(newer('img/'))
+	gulp.src('src/img/*')
+		// .pipe(newer('img/'))
 		.pipe(imagemin({optimizationLevel: 5}))
-		.pipe(gulp.dest('img/'));
+		.pipe(gulp.dest('dist/img'));
+})
+// Clean HTML files
+gulp.task('html', ()=>
+{
+	
+	gulp.src('src/*.html')
+	// .pipe(newer())
+	.pipe(htmlclean())
+	.pipe(gulp.dest('dist/'))
+
 })
 
-gulp.task('watch', ['browserSync', 'sass'], ()=>
-{
-	gulp.watch(['js/**/*.js', 'sass/**/*.scss'], ['sass','bundle','images'])
-})
+// gulp.task('watch', [ 'sass'], ()=>
+// {
+// 	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html'] , ['sass','bundle','images', 'html'])
+// })
 
 gulp.task('run', ['watch'])
 
 
-// After the images task is complete, clean HTML files for production
-// gulp.task('html', ['images'], ()=>
-// {
-// 	var out = folder.dist + 'html/';
-// 	var page = gulp.src(folder.src + 'html/**/*')
-// 	.pipe(newer(out))
 
-// 	if(!devBuild)
-// 	{
-// 		page = page.pipe(gulp.dest(out));
-// 	}
-
-// 	return page.pipe(dest(out));
-// })
 
 

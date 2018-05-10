@@ -1,7 +1,0 @@
-Normalise:
-
-https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css
-
-https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css
-
-https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css.map

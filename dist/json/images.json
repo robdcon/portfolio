@@ -1,0 +1,167 @@
+{
+	"images":
+	[
+		{
+			"category":"graphic_design",
+			"array":
+			[
+				{
+					"title":"Banner Ad for Rezoomo.com",
+					"url":"img/banner_1.jpg",
+					"url_lg":"img/banner_1_lg.jpg",
+					"alt":"banner graphic",
+					"tag":["graphics", "banner-ad"]
+				},
+				{
+					"title":"Banner Ad for Rezoomo.com",
+					"url":"img/banner_2.jpg",
+					"url_lg":"img/banner_2_lg.jpg",
+					"alt":"banner graphic",
+					"tag":["graphics", "banner-ad"]
+				},
+				{
+					"title":"Banner Ad for Rezoomo.com",
+					"url":"img/banner_3.jpg",
+					"url_lg":"img/banner_3_lg.jpg",
+					"alt":"banner graphic",
+					"tag":["graphics","banner-ad"]
+				},
+				{
+					"title":"Poster Mock Up 1 for V&A Exhibition",
+					"url":"img/jimi_collage.jpg",
+					"url_lg":"img/jimi_collage_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Poster Mock Up 2 for V&A Exhibition",
+					"url":"img/poster_hendrix.jpg",
+					"url_lg":"img/poster_hendrix_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Live Music Poster for Artillery Arms",
+					"url":"img/poster_livemusic2.jpg",
+					"url_lg":"img/poster_livemusic2_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Live Music Poster for Artillery Arms",
+					"url":"img/poster_livemusic3.jpg",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Live Music Poster for Artillery Arms",
+					"url":"img/poster_livemusic4.jpg",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Live Music Poster for Artillery Arms",
+					"url":"img/poster_livemusic5.jpg",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","poster"]
+				},
+				{
+					"title":"Logo for Galway Earth college society",
+					"url":"img/geos_logo.png",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","logo"]
+				},
+				{
+					"title":"Logo for Rezoomo recruitment website",
+					"url":"img/rezoomo-logo.png",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","logo"]
+				},
+				{
+					"title":"Logo for Rezoomo recruitment website",
+					"url":"img/rezoomo-logo-2.png",
+					"url_lg":"img/poster_livemusic3_lg.jpg",
+					"alt":"poster mock up graphic",
+					"tag":["graphics","logo"]
+				}
+				
+			]
+		},
+		{
+
+			"category":"artwork",
+			"array":
+			[
+				{
+					"title":"Archer",
+					"url":"img/lightbox_archer.jpg",
+					"url_lg":"img/lightbox_archer_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Bio-Mechanical Brain",
+					"url":"img/lightbox_bio_brain.jpg",
+					"url_lg":"img/lightbox_biobrain_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Bio-Mechanical Worms",
+					"url":"img/lightbox_bioworms.jpg",
+					"url_lg":"img/lightbox_bioworms_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Creature Feature - Punkfish - Coloured Pencil Art",
+					"url":"img/lightbox_punkfish.jpg",
+					"url_lg":"img/lightbox_punkfish_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Bob Marley - Ballpoint Pen Portrait",
+					"url":"img/lightbox_bob.jpg",
+					"url_lg":"img/lightbox_bob_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"The Joker - Ballpoint Pen Portrait",
+					"url":"img/lightbox_joker.jpg",
+					"url_lg":"img/lightbox_joker_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Al Pacino - Ballpoint Pen Portrait",
+					"url":"img/lightbox_pacino.jpg",
+					"url_lg":"img/lightbox_pacino_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Ceature Feature Hand Monster - Ballpoint Pen Drawing",
+					"url":"img/lightbox_handcreature.jpg",
+					"url_lg":"img/lightbox_handcreature_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				},
+				{
+					"title":"Eye of the Beholder - Airbrush & Acrylic",
+					"url":"img/eye-of-the-beholder.jpg",
+					"url_lg":"img/eye-of-the-beholder_lg.jpg",
+					"alt":"original artwork",
+					"tag":["artwork", "Pencil"]
+				}
+
+			]
+		}
+	]
+}

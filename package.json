@@ -13,10 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "browser-request": "^0.3.3",
+    "browserify": "^16.2.2",
     "fetch": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-browserify": "^0.5.1",
+    "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^4.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^4.0.1",
