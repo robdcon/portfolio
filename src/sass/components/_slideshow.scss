@@ -23,7 +23,7 @@
 	position: relative;
     display: inline-block;
     margin: 1em auto;
-    background-color: #000000;
+    //background-color: #000000;
 
 	@media(max-width:768px)
 	{
@@ -95,12 +95,29 @@
 		background-image: url(../img/arrow-left-hover.png) ;
 	}
 	
+}
+
+#slideshow-close
+{
+	position:absolute;
+	right:1em;
+	top:1em;
+	width:20px;
+	height:20px;
+
+	background-image:url('../img/x-icon.png');
+	&:hover
+	{
+		background-image:url('../img/x-icon-hover.png');
+	}
+	background-size:cover;
 }	
 
-#image-title
+.img-title
 {
+
 	padding:0.25em;
-	width:60%;
+	width:100%;
 
 }
 

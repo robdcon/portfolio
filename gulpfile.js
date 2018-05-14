@@ -43,7 +43,7 @@ gulp.task('images', ()=>
 {
 	
 	gulp.src('src/img/*')
-		// .pipe(newer('img/'))
+		.pipe(newer('dist/img/'))
 		.pipe(imagemin({optimizationLevel: 5}))
 		.pipe(gulp.dest('dist/img'));
 })
@@ -52,16 +52,16 @@ gulp.task('html', ()=>
 {
 	
 	gulp.src('src/*.html')
-	// .pipe(newer())
+	.pipe(newer('dist/'))
 	.pipe(htmlclean())
 	.pipe(gulp.dest('dist/'))
 
 })
 
-// gulp.task('watch', [ 'sass'], ()=>
-// {
-// 	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html'] , ['sass','bundle','images', 'html'])
-// })
+gulp.task('watch', [ 'sass'], ()=>
+{
+	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html'] , ['sass','bundle','images', 'html'])
+})
 
 gulp.task('run', ['watch'])
 

@@ -26871,6 +26871,14 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 	$('.sidebar-icon').toggleClass('sidebar-icon-active');
 	
 })
+// $('.sidebar-icon').on('mouseenter', function(ev)
+// {
+// 	$(ev.target).addClass('animate-icon')
+// })
+// $('.sidebar-icon').on('mouseout', function(ev)
+// {
+// 	$(ev.target).addClass('animate-icon')
+// })
 
 // Bind event handlers to set up slideshow
 
@@ -26884,7 +26892,10 @@ function initSlideshow()
 		$('#slide-content').load('slideshow.html', function()
 		{
 			$(this).fadeIn(500)
+			
 			slideshowDisplay(key)
+			$('#slideshow').fadeIn(500)
+			$('#slideshow').fadeIn(1000)
 			bindControls()
 
 		})	

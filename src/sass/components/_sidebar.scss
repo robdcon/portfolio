@@ -45,11 +45,19 @@ $sidebarWidth : (100vw / 2.6);
 	}
 	.sidebar-icon
 	{
+		height:25px;
+		width:25px;
 		position:absolute;
 		top: 5px;
 	    right: -11%;
 	    max-width: 10%;
 	    transition: all 0.5s;
+	    background-image:url('../img/menu-icon.png');
+	   /* &:hover
+	    {
+	    	background-image:url('../img/menu-icon-hover.png');
+	    }*/
+	    background-size:cover;
 
 	    @media(max-width:411px)
 	    {
@@ -59,15 +67,11 @@ $sidebarWidth : (100vw / 2.6);
 		    max-width: 20%;
 		    margin-right:-5px;
 	    }
-		img
-		{
-			max-width:100%;
-		}
 	}
 }
 .animate-icon
 {
-	animation: animMenuIcon 1s ease;
+	animation: animMenuIcon 0.5s 1;
 }
 @keyframes animMenuIcon 
 {
