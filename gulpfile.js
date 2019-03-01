@@ -51,16 +51,24 @@ gulp.task('images', ()=>
 gulp.task('html', ()=>
 {
 	
-	gulp.src('src/*.html')
+	gulp.src('./src/*.html')
 	.pipe(newer('dist/'))
 	.pipe(htmlclean())
+	.pipe(gulp.dest('dist/'))
+
+})
+gulp.task('json', ()=>
+{
+	
+	gulp.src('./src/**/*.json')
+	.pipe(newer('dist/'))
 	.pipe(gulp.dest('dist/'))
 
 })
 
 gulp.task('watch', [ 'sass'], ()=>
 {
-	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html'] , ['sass','bundle','images', 'html'])
+	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html', 'json/**/*.json'] , ['sass','bundle','images', 'html', 'json'])
 })
 
 gulp.task('run', ['watch'])

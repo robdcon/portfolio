@@ -5,7 +5,7 @@
 
 
 var imgContainer = $('#img-container') 
-var imgUrl = 'json/images.json'
+var imgUrl = 'json/image.json'
 
 function displaySlide(container,content)
 {
@@ -20,6 +20,7 @@ module.exports = slideshow
 
 function slideshow() 
 {
+
 	var imgContainer = $('#img-container')
 
 	var targetUrl = imgUrl

@@ -22,6 +22,7 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 
 function initSlideshow()
 {
+
 	$('.slideshow-init').click(function(ev)
 	{
 		// console.log('initSlideshow')
@@ -114,7 +115,7 @@ function revealAboutContent()
 
 $('#web-dev-link').click( ()=>
 {
-	$('#loaded-content').load('webdev.html')
+	$('#loaded-content').load('web.html')
 	setTimeout(revealWebContent, 500)	
 })
 
