@@ -82,23 +82,15 @@
 					"caption":"Illustrator/Photoshop",
 					"url":"img/geos_logo.png",
 					"url_lg":"img/poster_livemusic3_lg.jpg",
-					"alt":"poster mock up graphic",
+					"alt":"logo graphic",
 					"tag":["graphics","logo"]
 				},
 				{
 					"title":"Logo for Rezoomo recruitment website",
 					"caption":"Illustrator/Photoshop",
-					"url":"img/rezoomo-logo.png",
-					"url_lg":"img/rezoomo-logo.png",
-					"alt":"poster mock up graphic",
-					"tag":["graphics","logo"]
-				},
-				{
-					"title":"Logo for Rezoomo recruitment website",
-					"caption":"Illustrator/Photoshop",
-					"url":"img/rezoomo-logo-2.png",
-					"url_lg":"img/rezoomo-logo-2.png",
-					"alt":"poster mock up graphic",
+					"url":"img/rezoomo-logo-full.png",
+					"url_lg":"img/rezoomo-logo-full.png",
+					"alt":"logo graphic",
 					"tag":["graphics","logo"]
 				},
 				{
@@ -152,16 +144,8 @@
 				{
 					"title":"Business Card for Optimal Counselling",
 					"caption":"Illustrator/Photoshop",
-					"url":"img/bc-front-03.png",
+					"url":"img/optimal-counselling-business-card.png",
 					"url_lg":"img/bc-front-03.png",
-					"alt":"business card",
-					"tag":["graphics","poster"]
-				},
-				{
-					"title":"Business Card for Optimal Counselling",
-					"caption":"Illustrator/Photoshop",
-					"url":"img/bc-back-03.png",
-					"url_lg":"img/bc-back-03.png",
 					"alt":"business card",
 					"tag":["graphics","logo"]
 				}

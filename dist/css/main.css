@@ -129,11 +129,12 @@ nav.navbar {
   nav.navbar .navbar-collapse {
     background-color: black; }
 
-.grid-1 {
+.grid-content {
+  height: 100%;
   display: grid;
   grid-template-columns: 33.333% 33.333% 33.333%;
   grid-template-rows: 33.333% 33.333% 33.333%; }
-  .grid-1 .grid-item {
+  .grid-content .grid-item {
     border: 1px solid #000; }
 
 button {
@@ -406,11 +407,14 @@ div.web-dev-item.hide {
 #graphic-design-item-container {
   width: 100%;
   display: inline-block;
-  align-items: center;
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: center;
+  height: 100vh;
+  min-height: 100vh;
+  align-content: first baseline; }
 
 .graphic-design-item {
   padding: 1em;
@@ -925,3 +929,24 @@ span.page-caption {
   @media (max-width: 512px) {
     span.page-caption {
       width: 95%; } }
+
+.grid-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+  grid-template-rows: 33.333% 33.333% 33.333%; }
+  .grid-content .grid-item {
+    border: 1px solid #000; }
+
+#template {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between; }
+  #template #header, #template #footer {
+    height: 50px;
+    width: 100%;
+    background-color: #000; }

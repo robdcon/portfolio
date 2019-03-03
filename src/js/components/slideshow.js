@@ -5,7 +5,7 @@
 
 
 var imgContainer = $('#img-container') 
-var imgUrl = 'json/image.json'
+var imgUrl = 'json/images.json'
 
 function displaySlide(container,content)
 {

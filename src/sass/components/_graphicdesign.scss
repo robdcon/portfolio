@@ -17,12 +17,15 @@
 #graphic-design-item-container
 {
 	width: 100%;
-    display: inline-block;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+	display: inline-block;
+	align-items: baseline;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	height: 100vh;
+	min-height: 100vh;
+	align-content: first baseline;
 }
 
 
@@ -37,9 +40,6 @@
     margin-top:0;
     
 	transition:all 0.5s;
-
-	
-   
 
 	@media(max-width:1400px)
 	{

@@ -9,6 +9,20 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 	$('.sidebar-icon').toggleClass('sidebar-icon-active');
 	
 })
+
+function preloader() 
+{
+    function doPreload(strImagePath) 
+    {
+        var heavyImage = new Image();
+        heavyImage.src = strImagePath;
+    }
+
+    var arrImages = ["images/aboutart_invert.jpg","images/aboutweb_invert.jpg","images/aboutgraph_invert.jpg"];
+    for (var i = 0; i < arrImages.length; i++) {
+        doPreload(arrImages[i]);
+    }
+}
 // $('.sidebar-icon').on('mouseenter', function(ev)
 // {
 // 	$(ev.target).addClass('animate-icon')
@@ -89,6 +103,11 @@ $('#home').click(()=>
 		
 })
 
+function displayContent(page)
+{
+	$(page).fadeIn(250)
+	$(page).firstChild().removeClass('hide')
+}
 // Reveal web dev content
 function revealWebContent()
 {
@@ -109,6 +128,12 @@ function revealAboutContent()
 {
 	$('#about-page').fadeIn(250)
 	$('.about-content').removeClass('hide')
+}
+//Reveal grid content
+function revealAboutContent()
+{
+	$('#grid').fadeIn(250)
+	$('.grid-content').removeClass('hide')
 }
 
 // Bind click handlers to sidebar links once DOM elements have loaded by delaying with setTimeout function
@@ -134,12 +159,22 @@ $('#about').click(()=>
 	setTimeout(revealAboutContent, 500);
 		
 })
+
 // Load contact page
 $('#contact').click(()=>
 {
 	
 	$('#loaded-content').load('contact.html')
 	setTimeout(revealContactContent, 500);
+		
+})
+
+// Grid Layout Page
+$('#grid').click(()=>
+{
+	
+	$('#loaded-content').load('grid.html')
+	setTimeout(revealGridContent, 500);
 		
 })
 // Icon animations
@@ -176,6 +211,7 @@ function revealAboutText()
 
 $(document).ready(()=>
 {
+	preloader()
 
 	$('#loaded-content').load('home.html')
 
