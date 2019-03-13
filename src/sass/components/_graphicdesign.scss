@@ -5,10 +5,11 @@
 
 	text-align: center;
 	width: 100%;
-	min-height:100%;
+	height:auto;
+	min-height:100vh;
 	margin: 0 auto;
-
-	@media(max-width:411px)
+	
+	@media(max-width:768px)
 	{
 		height:auto;
 	}

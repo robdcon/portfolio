@@ -26881,7 +26881,7 @@ function preloader()
         heavyImage.src = strImagePath;
     }
 
-    var arrImages = ["images/aboutart_invert.jpg","images/aboutweb_invert.jpg","images/aboutgraph_invert.jpg"];
+    var arrImages = ["./img/aboutart_invert.jpg","./img/aboutweb_invert.jpg","./img/aboutgraph_invert.jpg"];
     for (var i = 0; i < arrImages.length; i++) {
         doPreload(arrImages[i]);
     }
@@ -26971,6 +26971,7 @@ function displayContent(page)
 	$(page).fadeIn(250)
 	$(page).firstChild().removeClass('hide')
 }
+
 // Reveal web dev content
 function revealWebContent()
 {
@@ -26992,6 +26993,7 @@ function revealAboutContent()
 	$('#about-page').fadeIn(250)
 	$('.about-content').removeClass('hide')
 }
+
 //Reveal grid content
 function revealAboutContent()
 {
@@ -27014,6 +27016,7 @@ $('#graphic-design-link').click( ()=>
 	setTimeout(initSlideshow, 1000)
 	
 })
+
 // Load about content
 $('#about').click(()=>
 {
@@ -27022,6 +27025,7 @@ $('#about').click(()=>
 	setTimeout(revealAboutContent, 500);
 		
 })
+
 // Load contact page
 $('#contact').click(()=>
 {
@@ -27030,14 +27034,7 @@ $('#contact').click(()=>
 	setTimeout(revealContactContent, 500);
 		
 })
-// Load contact page
-$('#grid').click(()=>
-{
-	
-	$('#loaded-content').load('grid.html')
-	setTimeout(revealContactContent, 500);
-		
-})
+
 // Grid Layout Page
 $('#grid').click(()=>
 {
@@ -27077,9 +27074,10 @@ function revealAboutText()
 	})
 }
 // Load home page on page load
-preloader()
+
 $(document).ready(()=>
 {
+	preloader()
 
 	$('#loaded-content').load('home.html')
 
