@@ -11,7 +11,8 @@
 					"url":"img/banner_1.jpg",
 					"url_lg":"img/banner_1_lg.jpg",
 					"alt":"banner graphic",
-					"tag":["graphics", "banner-ad"]
+					"tag":["graphics", "banner-ad"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Banner Ad for Rezoomo.com",
@@ -19,7 +20,8 @@
 					"url":"img/banner_2.jpg",
 					"url_lg":"img/banner_2_lg.jpg",
 					"alt":"banner graphic",
-					"tag":["graphics", "banner-ad"]
+					"tag":["graphics", "banner-ad"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Banner Ad for Rezoomo.com",
@@ -27,7 +29,8 @@
 					"url":"img/banner_3.jpg",
 					"url_lg":"img/banner_3_lg.jpg",
 					"alt":"banner graphic",
-					"tag":["graphics","banner-ad"]
+					"tag":["graphics","banner-ad"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Poster Mock Up 1 for V&A Exhibition",
@@ -35,7 +38,8 @@
 					"url":"img/jimi_collage.jpg",
 					"url_lg":"img/jimi_collage_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Poster Mock Up 2 for V&A Exhibition",
@@ -43,7 +47,8 @@
 					"url":"img/poster_hendrix.jpg",
 					"url_lg":"img/poster_hendrix_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
@@ -51,7 +56,8 @@
 					"url":"img/poster_livemusic2.jpg",
 					"url_lg":"img/poster_livemusic2_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
@@ -59,7 +65,8 @@
 					"url":"img/poster_livemusic3.jpg",
 					"url_lg":"img/poster_livemusic3_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
@@ -67,7 +74,8 @@
 					"url":"img/poster_livemusic4.jpg",
 					"url_lg":"img/poster_livemusic3_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Live Music Poster for Artillery Arms",
@@ -75,7 +83,8 @@
 					"url":"img/poster_livemusic5.jpg",
 					"url_lg":"img/poster_livemusic3_lg.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","poster"]
+					"tag":["graphics","poster"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Logo for Galway Earth college society",
@@ -83,7 +92,8 @@
 					"url":"img/geos_logo.png",
 					"url_lg":"img/poster_livemusic3_lg.jpg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Logo for Rezoomo recruitment website",
@@ -91,7 +101,8 @@
 					"url":"img/rezoomo-logo-full.png",
 					"url_lg":"img/rezoomo-logo-full.png",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Logo for house of hair academy",
@@ -99,7 +110,8 @@
 					"url":"img/house-of-hair-logo-black-on-white-background.png",
 					"url_lg":"img/house-of-hair-logo-black-on-white-background.jpg",
 					"alt":"poster mock up graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Logo for house of hair academy",
@@ -107,7 +119,8 @@
 					"url":"img/house-of-hair-logo-white-on-black-background.png",
 					"url_lg":"img/house-of-hair-logo-white-on-black-background.jpg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Sample Logo for Optimal Counselling",
@@ -115,7 +128,8 @@
 					"url":"img/logo_example_08.png",
 					"url_lg":"img/logo_example_08.jpg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Sample Logo for Optimal Counselling",
@@ -123,7 +137,8 @@
 					"url":"img/logo_example_09.png",
 					"url_lg":"img/logo_example_09.jpg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Sample Logo for Optimal Counselling",
@@ -131,7 +146,8 @@
 					"url":"img/logo_example_10.png",
 					"url_lg":"img/logo_example_10.jpg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Final Logo for Optimal Counselling",
@@ -139,7 +155,8 @@
 					"url":"img/optimal-counselling-logo.svg",
 					"url_lg":"img/optimal-counselling-logo.svg",
 					"alt":"logo graphic",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				},
 				{
 					"title":"Business Card for Optimal Counselling",
@@ -147,7 +164,8 @@
 					"url":"img/optimal-counselling-business-card.png",
 					"url_lg":"img/bc-front-03.png",
 					"alt":"business card",
-					"tag":["graphics","logo"]
+					"tag":["graphics","logo"],
+					"category":"graphic_design"
 				}
 
 
@@ -165,16 +183,17 @@
 					"url":"img/lightbox_archer.jpg",
 					"url_lg":"img/lightbox_archer_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Bio-Mechanical Brain",
 					"caption":"Ball point pen sketch",
-					"caption":"Illustrator/Photoshop",
 					"url":"img/lightbox_bio_brain.jpg",
 					"url_lg":"img/lightbox_biobrain_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Bio-Mechanical Worms",
@@ -182,7 +201,8 @@
 					"url":"img/lightbox_bioworms.jpg",
 					"url_lg":"img/lightbox_bioworms_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Creature Feature - Punkfish - Coloured Pencil Art",
@@ -190,7 +210,8 @@
 					"url":"img/lightbox_punkfish.jpg",
 					"url_lg":"img/lightbox_punkfish_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Bob Marley",
@@ -198,7 +219,8 @@
 					"url":"img/lightbox_bob.jpg",
 					"url_lg":"img/lightbox_bob_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"The Joker",
@@ -206,7 +228,8 @@
 					"url":"img/lightbox_joker.jpg",
 					"url_lg":"img/lightbox_joker_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Al Pacino",
@@ -214,7 +237,8 @@
 					"url":"img/lightbox_pacino.jpg",
 					"url_lg":"img/lightbox_pacino_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Ceature Feature Hand Monster",
@@ -222,7 +246,8 @@
 					"url":"img/lightbox_handcreature.jpg",
 					"url_lg":"img/lightbox_handcreature_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				},
 				{
 					"title":"Eye of the Beholder",
@@ -230,7 +255,8 @@
 					"url":"img/eye-of-the-beholder.jpg",
 					"url_lg":"img/eye-of-the-beholder_lg.jpg",
 					"alt":"original artwork",
-					"tag":["artwork", "Pencil"]
+					"tag":["artwork", "Pencil"],
+					"category":"artwork"
 				}
 
 			]

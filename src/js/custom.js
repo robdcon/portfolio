@@ -116,6 +116,13 @@ function revealWebContent()
 	$('.web-dev-item').removeClass('hide')
 }
 
+// Reveal web design content
+function revealWebDesignContent()
+{
+	$('#web-design').fadeIn(250)
+	$('.web-design-item').removeClass('hide')
+}
+
 //Reveal Graphic design content
 function revealGraphicsContent()
 {
@@ -143,6 +150,12 @@ function revealAboutContent()
 $('#web-dev-link').click( ()=>
 {
 	$('#loaded-content').load('web.html')
+	setTimeout(revealWebContent, 500)	
+})
+
+$('#web-design-link').click( ()=>
+{
+	$('#loaded-content').load('web-design.html')
 	setTimeout(revealWebContent, 500)	
 })
 

@@ -68,10 +68,17 @@ gulp.task('json', ()=>
 
 gulp.task('watch', [ 'sass'], ()=>
 {
+	browserSync.init({
+		opan:'external',
+		proxy:'localhost/my_portfolio/dist/',
+		port:8080
+	})
 	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html', 'json/**/*.json'] , ['sass','bundle','images', 'html', 'json'])
 })
 
 gulp.task('run', ['watch'])
+
+gulp.task('default', ['run'])
 
 
 
