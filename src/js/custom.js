@@ -10,6 +10,7 @@ $('.sidebar-icon, .sidebar nav ul li a').click(function()
 	
 })
 
+
 function preloader() 
 {
     function doPreload(strImagePath) 
@@ -155,8 +156,9 @@ $('#web-dev-link').click( ()=>
 
 $('#web-design-link').click( ()=>
 {
+	console.log('hello!')
 	$('#loaded-content').load('web-design.html')
-	setTimeout(revealWebContent, 500)	
+	setTimeout(revealWebDesignContent, 500)	
 })
 
 $('#graphic-design-link').click( ()=>

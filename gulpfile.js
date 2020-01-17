@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync').create()
 	htmlclean = require('gulp-htmlclean')
 
-gulp.task('browserSync', ()=>
+gulp.task('browserSync', (done)=>
 {
 	browserSync.init(
 	{
@@ -19,66 +19,76 @@ gulp.task('browserSync', ()=>
 			baseDir:'./'
 		}
 	})
+	done()
 })
 
 // Run scss files through autofixer
-gulp.task('sass', ()=>
+gulp.task('sass', (done)=>
 {
 	gulp.src('src/sass/**/*.scss')
 		.pipe(sass())
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('dist/css'))
+	done()
 	
 })
 // Bundle js files for production
-gulp.task('bundle', ()=>
+gulp.task('bundle', (done)=>
 {
 	gulp.src('src/js/custom.js')
 		.pipe(browserify())
 		.pipe(gulp.dest('dist/js'))
+	done();
 })
 
 // Compress images for productions 
-gulp.task('images', ()=> 
+gulp.task('images', (done)=> 
 {
 	
 	gulp.src('src/img/*')
 		.pipe(newer('dist/img/'))
 		.pipe(imagemin({optimizationLevel: 5}))
 		.pipe(gulp.dest('dist/img'));
+		done();
 })
 // Clean HTML files
-gulp.task('html', ()=>
+gulp.task('html', (done)=>
 {
 	
 	gulp.src('./src/*.html')
 	.pipe(newer('dist/'))
 	.pipe(htmlclean())
 	.pipe(gulp.dest('dist/'))
-
+	done();
 })
-gulp.task('json', ()=>
+gulp.task('json', (done)=>
 {
 	
 	gulp.src('./src/**/*.json')
 	.pipe(newer('dist/'))
 	.pipe(gulp.dest('dist/'))
+	done();
 
 })
 
-gulp.task('watch', [ 'sass'], ()=>
+gulp.task('watch', gulp.series('sass', (done)=>
 {
 	browserSync.init({
 		opan:'external',
 		proxy:'localhost/my_portfolio/dist/',
 		port:8080
 	})
-	gulp.watch(['js/**/*.js', 'sass/**/*.scss', 'src/**/*.html', 'json/**/*.json'] , ['sass','bundle','images', 'html', 'json'])
-})
+	//gulp.watch( 'js/**/*.js', 'sass/**/*.scss', 'src/**/*.html', 'json/**/*.json' , gulp.series('sass','bundle','images', 'html', 'json'))
+	gulp.watch( 'sass/**/*.scss',  gulp.series('sass'))
+	gulp.watch( 'js/**/*.js',  gulp.series('bundle'))
+	gulp.watch( 'src/**/*.html',  gulp.series('html'))
+	gulp.watch( 'json/**/*.json',  gulp.series('json'))
+	done();
+}))
 
-gulp.task('run', ['watch'])
+gulp.task('run',  gulp.series('watch'))
 
-gulp.task('default', ['run'])
+gulp.task('default', gulp.series('run'))
 
 
 

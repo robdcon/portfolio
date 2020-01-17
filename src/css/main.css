@@ -281,7 +281,7 @@ iframe {
   padding: 1em;
   height: 100%;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: #000000cc; }
 
 /* WEB DEVELOPMENT IFRAME PAGE */
 #web-dev {
