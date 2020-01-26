@@ -2,10 +2,14 @@
 #web-dev
 {
 	display: none;
-	text-align: center;
-	width: 100%;
-	height:auto;
+    text-align: center;
+    width:100%;
+	min-width: 100vw;
+    height:auto;
+    min-height:100vh;
 	margin: 0 auto;
+	overflow:hidden;
+	
 	
 }
 

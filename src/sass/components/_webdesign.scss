@@ -2,10 +2,13 @@
 #web-design
 {
 	display: none;
-	text-align: center;
-	width: 100%;
-	height:auto;
-	margin: 0 auto;
+    text-align: center;
+    width:100%;
+	min-width: 100vw;
+    height:auto;
+    min-height:100vh;
+    margin: 0 auto;
+    overflow: hidden;
 	
 }
 

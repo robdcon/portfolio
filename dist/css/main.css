@@ -338,8 +338,11 @@ iframe {
   display: none;
   text-align: center;
   width: 100%;
+  min-width: 100vw;
   height: auto;
-  margin: 0 auto; }
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden; }
 
 #web-dev-item-container {
   width: 100%;
@@ -395,8 +398,11 @@ div.web-dev-item.hide {
   display: none;
   text-align: center;
   width: 100%;
+  min-width: 100vw;
   height: auto;
-  margin: 0 auto; }
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden; }
 
 #web-design-item-container {
   width: 100%;
@@ -461,6 +467,7 @@ div.web-design-item.hide {
 
 #graphic-design-item-container {
   width: 100%;
+  width: 100vw;
   display: inline-block;
   align-items: baseline;
   display: flex;
